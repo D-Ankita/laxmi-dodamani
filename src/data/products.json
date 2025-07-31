@@ -1,0 +1,515 @@
+{
+  "products": [
+    {
+      "id": "besan-ladoo",
+      "name": "Besan Ladoo",
+      "price": {
+        "250g": 130,
+        "1kg": 500
+      },
+      "image": "/assets/products/besan_ladoo_1.png",
+      "description": "Traditional sweet made with roasted gram flour and pure ghee",
+      "detailedDescription": "A traditional Indian sweet made with roasted gram flour and pure ghee. Our Besan Ladoos are crafted using a generations-old recipe, where besan is carefully roasted to achieve the perfect golden color and nutty aroma. Each ladoo is hand-rolled to ensure perfect texture and consistency.",
+      "servingSuggestion": "Best enjoyed with a glass of warm milk or as an evening snack.",
+      "bestFor": [
+        "Festival celebrations",
+        "Energy boost",
+        "Post-workout snack",
+        "Healthy dessert option",
+        "Pregnancy cravings",
+        "Kids tiffin"
+      ],
+      "ingredients": [
+        "Gram flour (Besan)",
+        "Pure Ghee",
+        "Cardamom powder",
+        "Sugar",
+        "Roasted cashews (optional)"
+      ],
+      "benefits": [
+        "Rich in protein and fiber",
+        "Good source of energy",
+        "Contains healthy fats",
+        "Natural sweetness",
+        "High in iron and calcium",
+        "Boosts immunity"
+      ],
+      "nutritionalValue": {
+        "Protein": "6g per 100g",
+        "Fat": "25g per 100g",
+        "Carbs": "65g per 100g",
+        "Calories": "450 per 100g",
+        "Fiber": "3g per 100g",
+        "Iron": "2.5mg per 100g"
+      },
+      "rating": 4.8,
+      "reviews": 245,
+      "storageInfo": "Store in an airtight container. Stays fresh for up to 15 days at room temperature."
+    },
+    {
+      "id": "green-moong-ladoo",
+      "name": "Green Moong Ladoo",
+      "price": {
+        "250g": 130,
+        "1kg": 500
+      },
+      "image": "/assets/products/moong_ladoo_1.png",
+      "description": "Healthy and nutritious ladoo made with green moong dal",
+      "detailedDescription": "A healthy twist on traditional ladoos, made with sprouted green moong dal and natural sweeteners. These ladoos are a perfect blend of taste and nutrition, making them an ideal healthy snack option for all age groups.",
+      "servingSuggestion": "Perfect as a morning snack or post-workout energy boost.",
+      "bestFor": [
+        "Health conscious individuals",
+        "Children",
+        "Post-workout nutrition",
+        "Diabetic-friendly option",
+        "Pregnancy nutrition",
+        "Elderly people"
+      ],
+      "ingredients": [
+        "Green Moong Dal",
+        "Pure Ghee",
+        "Organic Jaggery",
+        "Cardamom powder",
+        "Edible camphor (optional)"
+      ],
+      "benefits": [
+        "High protein content",
+        "Rich in minerals",
+        "Easy to digest",
+        "Natural sweetness from jaggery",
+        "Good for diabetics",
+        "Promotes weight management"
+      ],
+      "nutritionalValue": {
+        "Protein": "8g per 100g",
+        "Fat": "20g per 100g",
+        "Carbs": "60g per 100g",
+        "Calories": "420 per 100g",
+        "Fiber": "4g per 100g",
+        "Iron": "3.5mg per 100g"
+      },
+      "rating": 4.7,
+      "reviews": 189,
+      "storageInfo": "Keep refrigerated for extended shelf life. Stays fresh for up to 20 days."
+    },
+    {
+      "id": "dinka-ladoo",
+      "name": "Dinka Ladoo",
+      "price": {
+        "250g": 160,
+        "1kg": 600
+      },
+      "image": "/assets/products/dinka_ladoo_1.png",
+      "description": "Special ladoo made with premium ingredients",
+      "detailedDescription": "Traditional winter special ladoos made with edible gum and dry fruits. These ladoos are particularly popular during winter months and are known for their warming properties and health benefits.",
+      "servingSuggestion": "Consume 1-2 ladoos daily during winter months.",
+      "bestFor": [
+        "Winter consumption",
+        "Post-pregnancy care",
+        "Joint health",
+        "Bone strength",
+        "Energy boost",
+        "Immunity building"
+      ],
+      "ingredients": [
+        "Premium edible gum (Dinka)",
+        "Pure Ghee",
+        "Wheat flour",
+        "Almonds",
+        "Cashews",
+        "Sugar"
+      ],
+      "benefits": [
+        "Excellent for bone health",
+        "Increases body heat",
+        "Good for joints",
+        "Strengthens immunity",
+        "Rich in healthy fats",
+        "Post-pregnancy recovery"
+      ],
+      "nutritionalValue": {
+        "Protein": "7g per 100g",
+        "Fat": "30g per 100g",
+        "Carbs": "55g per 100g",
+        "Calories": "480 per 100g",
+        "Fiber": "2.5g per 100g",
+        "Calcium": "150mg per 100g"
+      },
+      "rating": 4.9,
+      "reviews": 167,
+      "storageInfo": "Store in a cool, dry place. Stays fresh for up to 2 months."
+    },
+    {
+      "id": "groundnut-ladoo",
+      "name": "Groundnut Ladoo",
+      "price": {
+        "250g": 75,
+        "1kg": 280
+      },
+      "image": "/assets/products/groundnut_ladoo_1.png",
+      "description": "Nutritious ladoo made with roasted groundnuts",
+      "detailedDescription": "A protein-rich sweet made with freshly roasted groundnuts and organic jaggery. Our groundnut ladoos are made in small batches to ensure freshness and maintain the perfect crunch of roasted peanuts.",
+      "servingSuggestion": "Enjoy as a pre-workout snack or with evening tea.",
+      "bestFor": [
+        "Athletes",
+        "Growing children",
+        "Pre-workout snack",
+        "Healthy snacking",
+        "Weight gain",
+        "Energy boost"
+      ],
+      "ingredients": [
+        "Roasted groundnuts",
+        "Pure Ghee",
+        "Jaggery",
+        "Cardamom powder",
+        "Sesame seeds"
+      ],
+      "benefits": [
+        "High in protein",
+        "Rich in healthy fats",
+        "Good source of antioxidants",
+        "Heart-healthy",
+        "Energy-rich",
+        "Promotes brain health"
+      ],
+      "nutritionalValue": {
+        "Protein": "9g per 100g",
+        "Fat": "28g per 100g",
+        "Carbs": "52g per 100g",
+        "Calories": "460 per 100g",
+        "Fiber": "3.5g per 100g",
+        "Iron": "2mg per 100g"
+      },
+      "rating": 4.6,
+      "reviews": 156,
+      "storageInfo": "Store in an airtight container. Best consumed within 20 days."
+    },
+    {
+      "id": "rawa-ladoo",
+      "name": "Rawa Ladoo",
+      "price": {
+        "250g": 80,
+        "1kg": 300
+      },
+      "image": "/assets/products/rawa_ladoo_1.png",
+      "description": "Delicate ladoo made with roasted semolina",
+      "detailedDescription": "Light and delicious ladoos made with roasted semolina and fresh coconut. These ladoos have a unique texture and are perfect for those who prefer lighter sweets.",
+      "servingSuggestion": "Best enjoyed with afternoon tea or as a light dessert.",
+      "bestFor": [
+        "Light snacking",
+        "Festival offerings",
+        "Evening snack",
+        "Kids snack box",
+        "Quick energy",
+        "Digestive-friendly option"
+      ],
+      "ingredients": [
+        "Semolina (Rawa)",
+        "Pure Ghee",
+        "Sugar",
+        "Cardamom powder",
+        "Grated coconut",
+        "Cashews"
+      ],
+      "benefits": [
+        "Easy to digest",
+        "Quick energy source",
+        "Light on stomach",
+        "Rich in minerals",
+        "Good for metabolism",
+        "Balanced nutrition"
+      ],
+      "nutritionalValue": {
+        "Protein": "5g per 100g",
+        "Fat": "22g per 100g",
+        "Carbs": "68g per 100g",
+        "Calories": "410 per 100g",
+        "Fiber": "2g per 100g",
+        "Calcium": "80mg per 100g"
+      },
+      "rating": 4.5,
+      "reviews": 134,
+      "storageInfo": "Keep in airtight container. Fresh for up to 10 days."
+    },
+    {
+      "id": "til-sesame-ladoo",
+      "name": "Til (Sesame) Ladoo",
+      "price": {
+        "250g": 90,
+        "1kg": 350
+      },
+      "image": "/assets/products/til_ladoo_1.png",
+      "description": "Healthy ladoo made with roasted sesame seeds",
+      "detailedDescription": "Traditional winter special ladoos made with roasted sesame seeds and jaggery. These ladoos are not just delicious but also packed with the goodness of sesame seeds and natural sweetness of jaggery.",
+      "servingSuggestion": "Consume during winter mornings or evenings.",
+      "bestFor": [
+        "Winter consumption",
+        "Bone health",
+        "Natural warmth",
+        "Healthy snacking",
+        "Energy boost",
+        "Calcium supplement"
+      ],
+      "ingredients": [
+        "White sesame seeds",
+        "Pure Ghee",
+        "Jaggery",
+        "Peanuts",
+        "Cardamom powder"
+      ],
+      "benefits": [
+        "Rich in calcium",
+        "High in antioxidants",
+        "Good for bone health",
+        "Improves skin health",
+        "Aids digestion",
+        "Winter immunity booster"
+      ],
+      "nutritionalValue": {
+        "Protein": "7g per 100g",
+        "Fat": "25g per 100g",
+        "Carbs": "58g per 100g",
+        "Calories": "430 per 100g",
+        "Fiber": "3g per 100g",
+        "Calcium": "200mg per 100g"
+      },
+      "rating": 4.7,
+      "reviews": 178,
+      "storageInfo": "Stays fresh for up to 1 month when stored properly."
+    },
+    {
+      "id": "ragi-ladoo",
+      "name": "Ragi Ladoo",
+      "price": {
+        "250g": 120,
+        "1kg": 440
+      },
+      "image": "/assets/products/ragi_ladoo_1.png",
+      "description": "Nutritious ladoo made with finger millet flour",
+      "detailedDescription": "Healthy and nutritious ladoos made with finger millet flour and enriched with dry fruits. These ladoos are a perfect combination of taste and health, especially beneficial for growing children and women.",
+      "servingSuggestion": "Best consumed as breakfast or evening snack.",
+      "bestFor": [
+        "Growing children",
+        "Pregnant women",
+        "Diabetics",
+        "Weight watchers",
+        "Fitness enthusiasts",
+        "Anemia patients"
+      ],
+      "ingredients": [
+        "Ragi flour",
+        "Pure Ghee",
+        "Jaggery",
+        "Dry fruits",
+        "Cardamom powder"
+      ],
+      "benefits": [
+        "High in calcium",
+        "Gluten-free",
+        "Rich in iron",
+        "Good for diabetes",
+        "Aids weight loss",
+        "Improves hemoglobin"
+      ],
+      "nutritionalValue": {
+        "Protein": "6g per 100g",
+        "Fat": "18g per 100g",
+        "Carbs": "65g per 100g",
+        "Calories": "400 per 100g",
+        "Fiber": "3.5g per 100g",
+        "Calcium": "250mg per 100g"
+      },
+      "rating": 4.8,
+      "reviews": 198,
+      "storageInfo": "Store in cool, dry place. Stays fresh for up to 15 days."
+    },
+    {
+      "id": "methi-ladoo",
+      "name": "Methi Ladoo",
+      "price": {
+        "250g": 140,
+        "1kg": 600
+      },
+      "image": "/assets/products/methi_ladoo_1.png",
+      "description": "Healthy ladoo with fenugreek seeds",
+      "detailedDescription": "Traditional medicinal ladoos made with fenugreek seeds and wholesome ingredients. These ladoos are particularly beneficial for new mothers and those looking for health benefits along with taste.",
+      "servingSuggestion": "Take 1-2 ladoos daily, preferably in the morning.",
+      "bestFor": [
+        "New mothers",
+        "Post-pregnancy care",
+        "Diabetic patients",
+        "Digestive health",
+        "Immunity boosting",
+        "Women's health"
+      ],
+      "ingredients": [
+        "Fenugreek seeds",
+        "Whole wheat flour",
+        "Pure Ghee",
+        "Jaggery",
+        "Dry fruits"
+      ],
+      "benefits": [
+        "Improves lactation",
+        "Boosts immunity",
+        "Aids digestion",
+        "Controls diabetes",
+        "Anti-inflammatory",
+        "Rich in iron"
+      ],
+      "nutritionalValue": {
+        "Protein": "6g per 100g",
+        "Fat": "22g per 100g",
+        "Carbs": "62g per 100g",
+        "Calories": "440 per 100g",
+        "Fiber": "4g per 100g",
+        "Iron": "4mg per 100g"
+      },
+      "rating": 4.6,
+      "reviews": 145,
+      "storageInfo": "Keeps well for up to 1 month in airtight container."
+    },
+    {
+      "id": "murmura-chivda",
+      "name": "Murmura Chivda",
+      "price": {
+        "250g": 70,
+        "1kg": 280
+      },
+      "image": "/assets/products/murmura_chivda_1.png",
+      "description": "Crispy snack made with puffed rice",
+      "detailedDescription": "A light and crunchy snack made with puffed rice and a perfect blend of spices. Our Murmura Chivda is made fresh in small batches to maintain its signature crunchiness and flavor.",
+      "servingSuggestion": "Perfect with evening tea or as a light snack.",
+      "bestFor": [
+        "Evening snacking",
+        "Travel snack",
+        "Light munching",
+        "Kids snack box",
+        "Party snack",
+        "Tea time companion"
+      ],
+      "ingredients": [
+        "Puffed rice",
+        "Pure Ghee",
+        "Peanuts",
+        "Curry leaves",
+        "Spices",
+        "Dry fruits"
+      ],
+      "benefits": [
+        "Light on stomach",
+        "Quick energy source",
+        "Low calorie snack",
+        "Good for digestion",
+        "Protein rich",
+        "Healthy munching option"
+      ],
+      "nutritionalValue": {
+        "Protein": "4g per 100g",
+        "Fat": "15g per 100g",
+        "Carbs": "70g per 100g",
+        "Calories": "380 per 100g",
+        "Fiber": "2g per 100g",
+        "Iron": "1.5mg per 100g"
+      },
+      "rating": 4.5,
+      "reviews": 167,
+      "storageInfo": "Stays crispy for up to 15 days in airtight container."
+    },
+    {
+      "id": "avalakki-chivda",
+      "name": "Avalakki Chivda",
+      "price": {
+        "250g": 80,
+        "1kg": 300
+      },
+      "image": "/assets/products/avalakki_chivda_1.jpg",
+      "description": "Flattened rice snack with nuts and spices",
+      "detailedDescription": "A traditional South Indian snack made with flattened rice and a special blend of spices. Our Avalakki Chivda is known for its perfect balance of spices and crunchiness.",
+      "servingSuggestion": "Can be enjoyed dry or mixed with onions and tomatoes.",
+      "bestFor": [
+        "Breakfast",
+        "Evening snack",
+        "Travel food",
+        "Quick meals",
+        "Party snack",
+        "Festive occasions"
+      ],
+      "ingredients": [
+        "Flattened rice",
+        "Pure Ghee",
+        "Roasted peanuts",
+        "Curry leaves",
+        "Spices",
+        "Cashews"
+      ],
+      "benefits": [
+        "Energy rich",
+        "Easy to digest",
+        "Good carb source",
+        "Rich in iron",
+        "Healthy fats",
+        "Quick energy boost"
+      ],
+      "nutritionalValue": {
+        "Protein": "5g per 100g",
+        "Fat": "18g per 100g",
+        "Carbs": "68g per 100g",
+        "Calories": "390 per 100g",
+        "Fiber": "2.5g per 100g",
+        "Iron": "2mg per 100g"
+      },
+      "rating": 4.6,
+      "reviews": 156,
+      "storageInfo": "Maintains freshness for up to 20 days when stored properly."
+    },
+    {
+      "id": "chakli",
+      "name": "Chakli",
+      "price": {
+        "250g": 100,
+        "1kg": 400
+      },
+      "image": "/assets/products/chakli_1.png",
+      "description": "Spiral-shaped crispy snack made with rice flour",
+      "detailedDescription": "A spiral-shaped crispy snack made with a perfect blend of rice flour and spices. Our Chaklis are hand-crafted to achieve the perfect spiral shape and crispiness that lasts longer.",
+      "servingSuggestion": "Best enjoyed with hot tea or coffee.",
+      "bestFor": [
+        "Tea time snack",
+        "Festival special",
+        "Party snack",
+        "Travel food",
+        "Evening munching",
+        "Festive gifting"
+      ],
+      "ingredients": [
+        "Rice flour",
+        "Urad dal flour",
+        "Pure Ghee",
+        "Sesame seeds",
+        "Spices",
+        "Cumin seeds"
+      ],
+      "benefits": [
+        "Gluten-free",
+        "Good source of carbs",
+        "Rich in proteins",
+        "Healthy snacking option",
+        "Energy rich",
+        "Contains essential minerals"
+      ],
+      "nutritionalValue": {
+        "Protein": "6g per 100g",
+        "Fat": "20g per 100g",
+        "Carbs": "65g per 100g",
+        "Calories": "420 per 100g",
+        "Fiber": "2g per 100g",
+        "Iron": "1.8mg per 100g"
+      },
+      "rating": 4.7,
+      "reviews": 189,
+      "storageInfo": "Stays crispy for up to 1 month in airtight container."
+    }
+  ]
+} 
