@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider, createTheme, CssBaseline, Box } from '@mui/material';
+import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -14,23 +14,24 @@ import './App.css';
 
 const theme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
-      main: '#1B3C6B',
-      light: '#2D5A9D',
-      dark: '#122944',
+      main: '#3B82F6',
+      light: '#60A5FA',
+      dark: '#1D4ED8',
     },
     secondary: {
-      main: '#9D2235',
-      light: '#B8293F',
-      dark: '#7A1A29',
+      main: '#8B5CF6',
+      light: '#A855F7',
+      dark: '#7C3AED',
     },
     background: {
-      default: '#FFFFFF',
-      paper: '#FFFFFF',
+      default: '#F0F4F8',
+      paper: '#F8FAFC',
     },
     text: {
-      primary: '#1A1A1A',
-      secondary: '#4A4A4A',
+      primary: '#1E293B',
+      secondary: '#475569',
     },
   },
   typography: {
@@ -91,7 +92,7 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: '#FFFFFF',
+          backgroundColor: '#F0F4F8',
         },
       },
     },
@@ -145,33 +146,27 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
-          <Box sx={{ 
-            display: 'flex', 
-            flexDirection: 'column', 
-            minHeight: '100vh',
-            backgroundColor: '#FAFAFA'
-          }}>
+          <div className="app">
+            {/* Animated Background */}
+            <div className="animated-bg">
+              <div className="glow-orb"></div>
+              <div className="glow-orb"></div>
+              <div className="glow-orb"></div>
+            </div>
+            
             <Navbar />
-            <Box
-              component="main"
-              sx={{
-                flexGrow: 1,
-                width: '100%',
-                pt: { xs: 8, sm: 9 },
-                pb: 4,
-              }}
-            >
-                          <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/dareshwar-kitchen" element={<DareshwarKitchen />} />
-              <Route path="/lic-services" element={<LICServices />} />
-              <Route path="/star-health" element={<StarHealth />} />
-              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-              <Route path="/terms-of-service" element={<TermsOfService />} />
-            </Routes>
-            </Box>
+            <main className="main-content">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/dareshwar-kitchen" element={<DareshwarKitchen />} />
+                <Route path="/lic-services" element={<LICServices />} />
+                <Route path="/star-health" element={<StarHealth />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+              </Routes>
+            </main>
             <Footer />
-          </Box>
+          </div>
         </Router>
       </ThemeProvider>
     </HelmetProvider>

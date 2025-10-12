@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import {
   AppBar,
   Toolbar,
-  Box,
   Button,
   IconButton,
   Drawer,
@@ -23,9 +22,20 @@ const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const routes = [
-    { path: '/', label: 'About Me' },
+    { path: '/', label: 'Home' },
     { path: '/dareshwar-kitchen', label: 'Dareshwar Kitchen' },
     { path: '/lic-services', label: 'LIC Services' },
     { path: '/star-health', label: 'Star Health' },
@@ -52,13 +62,14 @@ const Navbar = () => {
           selected={location.pathname === route.path}
           sx={{
             my: 1,
-            borderRadius: 1,
+            borderRadius: 2,
             mx: 1,
+            transition: 'all 0.3s ease',
             '&.Mui-selected': {
-              backgroundColor: 'primary.light',
+              background: 'linear-gradient(135deg, rgba(27, 60, 107, 0.1) 0%, rgba(157, 34, 53, 0.1) 100%)',
               color: 'primary.main',
               '&:hover': {
-                backgroundColor: 'primary.light',
+                background: 'linear-gradient(135deg, rgba(27, 60, 107, 0.2) 0%, rgba(157, 34, 53, 0.2) 100%)',
               },
             },
           }}
@@ -67,6 +78,7 @@ const Navbar = () => {
             primary={route.label}
             sx={{
               color: location.pathname === route.path ? 'primary.main' : 'text.primary',
+              fontWeight: location.pathname === route.path ? 600 : 500,
             }}
           />
         </ListItem>
@@ -75,105 +87,171 @@ const Navbar = () => {
   );
 
   return (
-    <AppBar
-      position="fixed"
-      color="default"
-      elevation={0}
-      sx={{
-        backgroundColor: 'background.paper',
-        borderBottom: '1px solid',
-        borderColor: 'divider',
-      }}
+    <motion.div
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 100, damping: 20 }}
     >
-      <Container maxWidth="lg">
-        <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 0, sm: 2 } }}>
-          <motion.img
-            src="/assets/1000174754.png"
-            alt="Laxmi Dodamani"
-            style={{
-              height: '60px',
-              cursor: 'pointer',
-              objectFit: 'contain',
-              marginRight: '20px'
-            }}
-            onClick={() => handleNavigation('/')}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          />
+      <AppBar
+        position="fixed"
+        color="default"
+        elevation={0}
+        sx={{
+          background: scrolled 
+            ? 'rgba(255, 255, 255, 0.95)' 
+            : 'rgba(255, 255, 255, 0.8)',
+          backdropFilter: 'blur(20px)',
+          borderBottom: scrolled 
+            ? '1px solid rgba(255, 255, 255, 0.2)' 
+            : '1px solid rgba(255, 255, 255, 0.1)',
+          transition: 'all 0.3s ease',
+          boxShadow: scrolled 
+            ? '0 8px 32px rgba(0, 0, 0, 0.1)' 
+            : 'none',
+        }}
+      >
+        <Container maxWidth="lg">
+          <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 0, sm: 2 } }}>
+                      <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <motion.img
+              src="/assets/1000174754.png"
+              alt="Laxmi Dodamani"
+              style={{
+                height: '60px',
+                cursor: 'pointer',
+                objectFit: 'contain',
+                marginRight: '20px',
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))',
+              }}
+              onClick={() => handleNavigation('/')}
+              whileHover={{ 
+                filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.15))',
+                transition: { duration: 0.3 }
+              }}
+            />
+          </motion.div>
 
-          {isMobile ? (
-            <IconButton
-              color="primary"
-              aria-label="open drawer"
-              edge="end"
-              onClick={handleDrawerToggle}
-              sx={{ ml: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            <Box sx={{ display: 'flex', gap: 2 }}>
-              {routes.map((route) => (
-                <Button
-                  key={route.path}
-                  onClick={() => handleNavigation(route.path)}
-                  sx={{
-                    color: location.pathname === route.path ? 'primary.main' : 'text.primary',
-                    position: 'relative',
-                    fontWeight: 500,
-                    fontSize: '1rem',
-                    px: 2,
+            {isMobile ? (
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <IconButton
+                  color="primary"
+                  aria-label="open drawer"
+                  edge="end"
+                  onClick={handleDrawerToggle}
+                  sx={{ 
+                    ml: 2,
+                    background: 'rgba(255, 255, 255, 0.2)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(255, 255, 255, 0.3)',
                     '&:hover': {
-                      backgroundColor: 'transparent',
-                      color: 'primary.main',
-                    },
-                    '&::after': {
-                      content: '""',
-                      position: 'absolute',
-                      width: location.pathname === route.path ? '100%' : '0%',
-                      height: '2px',
-                      bottom: 0,
-                      left: 0,
-                      backgroundColor: 'primary.main',
-                      transition: 'width 0.3s ease-in-out',
-                    },
-                    '&:hover::after': {
-                      width: '100%',
-                    },
+                      background: 'rgba(255, 255, 255, 0.3)',
+                      transform: 'scale(1.05)',
+                    }
                   }}
                 >
-                  {route.label}
-                </Button>
-              ))}
-            </Box>
-          )}
-        </Toolbar>
-      </Container>
+                  <MenuIcon />
+                </IconButton>
+              </motion.div>
+            ) : (
+              <div style={{ display: 'flex', gap: '16px' }}>
+                {routes.map((route, index) => (
+                  <motion.div
+                    key={route.path}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Button
+                      onClick={() => handleNavigation(route.path)}
+                      sx={{
+                        color: location.pathname === route.path ? 'primary.main' : 'text.primary',
+                        position: 'relative',
+                        fontWeight: location.pathname === route.path ? 600 : 500,
+                        fontSize: '1rem',
+                        px: 3,
+                        py: 1.5,
+                        borderRadius: '12px',
+                        transition: 'all 0.3s ease',
+                        background: location.pathname === route.path 
+                          ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)'
+                          : 'transparent',
+                        backdropFilter: 'blur(10px)',
+                        border: location.pathname === route.path 
+                          ? '1px solid rgba(59, 130, 246, 0.2)'
+                          : '1px solid transparent',
+                        '&:hover': {
+                          background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                          color: 'primary.main',
+                          transform: 'translateY(-2px)',
+                          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                        },
+                        '&::after': {
+                          content: '""',
+                          position: 'absolute',
+                          width: location.pathname === route.path ? '100%' : '0%',
+                          height: '2px',
+                          bottom: 0,
+                          left: 0,
+                          background: 'linear-gradient(90deg, #3B82F6, #8B5CF6)',
+                          transition: 'width 0.3s ease-in-out',
+                          borderRadius: '1px',
+                        },
+                        '&:hover::after': {
+                          width: '100%',
+                        },
+                      }}
+                    >
+                      {route.label}
+                    </Button>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </Toolbar>
+        </Container>
 
-      <AnimatePresence>
-        {isMobile && (
-          <Drawer
-            variant="temporary"
-            anchor="right"
-            open={mobileOpen}
-            onClose={handleDrawerToggle}
-            ModalProps={{
-              keepMounted: true,
-            }}
-            sx={{
-              '& .MuiDrawer-paper': {
-                width: 240,
-                backgroundColor: 'background.paper',
-                pt: 2,
-              },
-            }}
-          >
-            {drawer}
-          </Drawer>
-        )}
-      </AnimatePresence>
-    </AppBar>
+        <AnimatePresence>
+          {isMobile && (
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+              <Drawer
+                variant="temporary"
+                anchor="right"
+                open={mobileOpen}
+                onClose={handleDrawerToggle}
+                ModalProps={{
+                  keepMounted: true,
+                }}
+                sx={{
+                  '& .MuiDrawer-paper': {
+                    width: 280,
+                    background: 'rgba(255, 255, 255, 0.95)',
+                    backdropFilter: 'blur(20px)',
+                    border: '1px solid rgba(255, 255, 255, 0.2)',
+                    pt: 2,
+                    boxShadow: '0 16px 48px rgba(0,0,0,0.15)',
+                  }
+                }}
+              >
+                {drawer}
+              </Drawer>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </AppBar>
+    </motion.div>
   );
 };
 

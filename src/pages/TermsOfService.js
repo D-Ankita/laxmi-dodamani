@@ -1,7 +1,9 @@
 import React from 'react';
-import { Container, Typography, Paper, Divider } from '@mui/material';
+import { Container, Typography, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
-import { Gavel, Business, Security, Warning, ContactSupport, Description } from '@mui/icons-material';
+import { 
+  Description
+} from '@mui/icons-material';
 import SEO from '../components/SEO';
 
 const TermsOfService = () => {
@@ -13,302 +15,224 @@ const TermsOfService = () => {
     "url": "https://laxmi-dodamani.netlify.app/terms-of-service"
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15
+      }
+    }
+  };
+
   return (
     <>
       <SEO 
-        title="Terms of Service"
-        description="Terms of Service for Laxmi Dodamani's website. Read our terms and conditions for using our services."
-        keywords="terms of service, terms and conditions, legal"
+        title="Terms of Service - Laxmi Dodamani"
+        description="Terms of Service for Laxmi Dodamani's website. Learn about the terms and conditions governing the use of our services."
+        keywords="terms of service, terms and conditions, legal terms, Laxmi Dodamani"
         url="/terms-of-service"
         structuredData={structuredData}
       />
-      <Container maxWidth="lg" sx={{ pt: 12, pb: 6 }}>
+      
+      <Container maxWidth="md">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          style={{ marginTop: '40px', marginBottom: '60px' }}
         >
-          {/* Header */}
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <Gavel sx={{ fontSize: 60, color: 'primary.main', marginBottom: '16px' }} />
-            <Typography variant="h3" color="primary" gutterBottom>
+          {/* Document Header */}
+          <motion.div variants={itemVariants} style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <Description className="animated-icon" sx={{ fontSize: '3rem', color: 'primary.main', marginBottom: '16px' }} />
+            <Typography variant="h2" color="primary" gutterBottom sx={{ fontWeight: 800, marginBottom: '16px' }}>
               Terms of Service
             </Typography>
-            <Typography variant="h6" color="text.secondary" gutterBottom>
-              Legal Agreement
+            <Typography variant="h6" color="text.secondary" sx={{ marginBottom: '8px' }}>
+              Last Updated: December 2024
             </Typography>
             <Typography variant="body1" color="text.secondary">
-              Last updated: {new Date().toLocaleDateString('en-US', { 
-                year: 'numeric', 
-                month: 'long', 
-                day: 'numeric' 
-              })}
+              Effective Date: December 1, 2024
             </Typography>
-          </div>
+          </motion.div>
 
-          {/* Introduction */}
-          <Paper sx={{ p: 4, mb: 4, bgcolor: 'primary.50' }}>
-            <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Description color="primary" />
-              Agreement to Terms
-            </Typography>
-            <Typography variant="body1" paragraph>
-              These Terms of Service ("Terms") govern your use of the website and services operated by Laxmi Dodamani 
-              ("we," "us," or "our"). By accessing or using our website and services, you agree to be bound by these Terms. 
-              If you disagree with any part of these terms, you may not access our services.
-            </Typography>
-            <Typography variant="body1">
-              These Terms apply to all visitors, users, and others who access or use our services.
-            </Typography>
-          </Paper>
+          {/* Document Content */}
+          <motion.div variants={itemVariants}>
+            <Paper 
+              elevation={0}
+              sx={{ 
+                background: 'transparent',
+                padding: '40px',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                borderRadius: '16px',
+                lineHeight: 1.8
+              }}
+            >
+              {/* Introduction */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginBottom: '24px' }}>
+                1. Acceptance of Terms
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+              </Typography>
 
-          {/* Services */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Business color="primary" />
-              Our Services
-            </Typography>
-            <Typography variant="body1" paragraph>
-              We provide the following services:
-            </Typography>
-            <ul style={{ paddingLeft: '32px', marginBottom: '24px' }}>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                <strong>Insurance Services:</strong> LIC and Star Health insurance consultation, policy management, and claim assistance
+              {/* Services Description */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                2. Services Description
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                <strong>Food Products:</strong> Traditional homemade delicacies through Dareshwar Kitchen
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                Laxmi Dodamani provides insurance consultation services and traditional homemade food products. Our services include:
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                <strong>Consultation:</strong> Expert advice and support for insurance and food products
+              <Typography variant="body1" component="div" sx={{ marginLeft: '20px', marginBottom: '20px' }}>
+                • Insurance consultation and policy management<br/>
+                • Life insurance and health insurance services<br/>
+                • Traditional homemade food products<br/>
+                • Bulk orders and custom catering<br/>
+                • Home delivery services
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                <strong>Customer Support:</strong> Assistance with inquiries, orders, and service-related matters
-              </Typography>
-            </ul>
-          </Paper>
 
-          {/* Use License */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Use License
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Permission is granted to temporarily access the materials on Laxmi Dodamani's website for personal, 
-              non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, 
-              and under this license you may not:
-            </Typography>
-            <ul style={{ paddingLeft: '32px', marginBottom: '24px' }}>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Modify or copy the materials for commercial purposes
+              {/* User Responsibilities */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                3. User Responsibilities
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Use the materials for any commercial purpose or public display
+              <Typography variant="h6" color="text.primary" gutterBottom sx={{ fontWeight: 600, marginBottom: '16px' }}>
+                3.1 Accurate Information
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Attempt to reverse engineer any software contained on the website
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                You agree to provide accurate, current, and complete information when using our services. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Remove any copyright or other proprietary notations from the materials
-              </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Transfer the materials to another person or "mirror" the materials on any other server
-              </Typography>
-            </ul>
-            <Typography variant="body1">
-              This license shall automatically terminate if you violate any of these restrictions and may be terminated 
-              by Laxmi Dodamani at any time.
-            </Typography>
-          </Paper>
 
-          {/* User Responsibilities */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              User Responsibilities
-            </Typography>
-            <Typography variant="body1" paragraph>
-              When using our services, you agree to:
-            </Typography>
-            <ul style={{ paddingLeft: '32px', marginBottom: '24px' }}>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Provide accurate and complete information when required
+              <Typography variant="h6" color="text.primary" gutterBottom sx={{ fontWeight: 600, marginBottom: '16px' }}>
+                3.2 Acceptable Use
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Maintain the security of your account and information
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                You agree not to use our services for any unlawful purpose or in any way that could damage, disable, overburden, or impair our servers or networks.
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Use our services in compliance with applicable laws and regulations
-              </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Not engage in any activity that could harm our systems or other users
-              </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Respect intellectual property rights and not infringe on our or others' rights
-              </Typography>
-            </ul>
-          </Paper>
 
-          {/* Intellectual Property */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Intellectual Property Rights
-            </Typography>
-            <Typography variant="body1" paragraph>
-              The Service and its original content, features, and functionality are and will remain the exclusive property 
-              of Laxmi Dodamani and its licensors. The Service is protected by copyright, trademark, and other laws.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Our trademarks and trade dress may not be used in connection with any product or service without our prior 
-              written consent.
-            </Typography>
-          </Paper>
+              {/* Payment Terms */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                4. Payment and Pricing
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '16px', textAlign: 'justify' }}>
+                All prices are subject to change without notice. Payment is due at the time of order placement. We accept various payment methods as indicated on our website.
+              </Typography>
+              <Typography variant="body1" component="div" sx={{ marginLeft: '20px', marginBottom: '20px' }}>
+                • Prices are listed in Indian Rupees (INR)<br/>
+                • Bulk orders may qualify for special pricing<br/>
+                • Delivery charges may apply based on location<br/>
+                • All payments are processed securely
+              </Typography>
 
-          {/* Disclaimer */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Warning color="primary" />
-              Disclaimer
-            </Typography>
-            <Typography variant="body1" paragraph>
-              The information on this website is provided on an "as is" basis. To the fullest extent permitted by law, 
-              Laxmi Dodamani excludes all representations, warranties, conditions and terms whether express or implied.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              We make no warranties about:
-            </Typography>
-            <ul style={{ paddingLeft: '32px', marginBottom: '24px' }}>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                The completeness, accuracy, reliability, suitability, or availability of the information
+              {/* Delivery and Shipping */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                5. Delivery and Shipping
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                The website or the information, products, services, or related graphics contained on the website
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                We strive to deliver orders promptly and safely. Delivery times may vary based on location and order volume. We are not responsible for delays caused by circumstances beyond our control.
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Uninterrupted or error-free operation of the website
-              </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                The correction of any errors or defects in the website
-              </Typography>
-            </ul>
-          </Paper>
 
-          {/* Limitations */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Limitations of Liability
-            </Typography>
-            <Typography variant="body1" paragraph>
-              In no event shall Laxmi Dodamani, nor its directors, employees, partners, agents, suppliers, or affiliates, 
-              be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, 
-              loss of profits, data, use, goodwill, or other intangible losses, resulting from:
-            </Typography>
-            <ul style={{ paddingLeft: '32px', marginBottom: '24px' }}>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Your use or inability to use the Service
+              {/* Returns and Refunds */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                6. Returns and Refunds
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Any unauthorized access to or use of our servers and/or any personal information stored therein
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                Due to the nature of our food products, we do not accept returns for hygiene reasons. However, if you receive damaged or incorrect items, please contact us within 24 hours for resolution.
               </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Any interruption or cessation of transmission to or from the Service
-              </Typography>
-              <Typography component="li" variant="body1" sx={{ mb: 1 }}>
-                Any bugs, viruses, trojan horses, or the like that may be transmitted to or through the Service
-              </Typography>
-            </ul>
-          </Paper>
 
-          {/* Privacy */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <Security color="primary" />
-              Privacy and Data Protection
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the Service, 
-              to understand our practices regarding the collection and use of your personal information.
-            </Typography>
-            <Typography variant="body1">
-              By using our Service, you consent to the collection and use of information in accordance with our Privacy Policy.
-            </Typography>
-          </Paper>
-
-          {/* Termination */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Termination
-            </Typography>
-            <Typography variant="body1" paragraph>
-              We may terminate or suspend your access immediately, without prior notice or liability, for any reason whatsoever, 
-              including without limitation if you breach the Terms.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Upon termination, your right to use the Service will cease immediately. If you wish to terminate your account, 
-              you may simply discontinue using the Service.
-            </Typography>
-          </Paper>
-
-          {/* Governing Law */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Governing Law
-            </Typography>
-            <Typography variant="body1" paragraph>
-              These Terms shall be interpreted and governed by the laws of India, without regard to its conflict of law provisions. 
-              Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.
-            </Typography>
-            <Typography variant="body1">
-              If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions 
-              of these Terms will remain in effect.
-            </Typography>
-          </Paper>
-
-          {/* Changes */}
-          <Paper sx={{ p: 4, mb: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Changes to Terms
-            </Typography>
-            <Typography variant="body1" paragraph>
-              We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is 
-              material, we will try to provide at least 30 days notice prior to any new terms taking effect.
-            </Typography>
-            <Typography variant="body1">
-              What constitutes a material change will be determined at our sole discretion. By continuing to access or use 
-              our Service after those revisions become effective, you agree to be bound by the revised terms.
-            </Typography>
-          </Paper>
-
-          {/* Contact */}
-          <Paper sx={{ p: 4, mb: 4, bgcolor: 'primary.50' }}>
-            <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <ContactSupport color="primary" />
-              Contact Information
-            </Typography>
-            <Typography variant="body1" paragraph>
-              If you have any questions about these Terms of Service, please contact us:
-            </Typography>
-            <div style={{ paddingLeft: '16px' }}>
-              <Typography variant="body1" sx={{ mb: 1 }}>
-                • Through our website contact form
+              {/* Intellectual Property */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                7. Intellectual Property Rights
               </Typography>
-              <Typography variant="body1" sx={{ mb: 1 }}>
-                • Via email at our contact address
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                All content on this website, including text, graphics, logos, images, and software, is the property of Laxmi Dodamani and is protected by copyright laws. You may not reproduce, distribute, or create derivative works without our written permission.
               </Typography>
-              <Typography variant="body1">
-                • By visiting our office in Belgaum, Karnataka
-              </Typography>
-            </div>
-          </Paper>
 
-          {/* Acknowledgment */}
-          <Paper sx={{ p: 4, bgcolor: 'grey.50' }}>
-            <Typography variant="h6" gutterBottom>
-              Acknowledgment
-            </Typography>
-            <Typography variant="body1">
-              By using our Service, you acknowledge that you have read these Terms of Service and agree to be bound by them. 
-              If you do not agree to these terms, please do not use our Service.
-            </Typography>
-          </Paper>
+              {/* Privacy and Data */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                8. Privacy and Data Protection
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of our services, to understand our practices regarding the collection and use of your personal information.
+              </Typography>
+
+              {/* Disclaimers */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                9. Disclaimers
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '16px', textAlign: 'justify' }}>
+                Our services are provided "as is" without warranties of any kind. We disclaim all warranties, express or implied, including but not limited to:
+              </Typography>
+              <Typography variant="body1" component="div" sx={{ marginLeft: '20px', marginBottom: '20px' }}>
+                • Warranties of merchantability and fitness for a particular purpose<br/>
+                • Warranties that the service will be uninterrupted or error-free<br/>
+                • Warranties regarding the accuracy or reliability of information
+              </Typography>
+
+              {/* Limitation of Liability */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                10. Limitation of Liability
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                In no event shall Laxmi Dodamani be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of our services.
+              </Typography>
+
+              {/* Indemnification */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                11. Indemnification
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                You agree to indemnify and hold harmless Laxmi Dodamani from any claims, damages, losses, or expenses arising from your use of our services or violation of these terms.
+              </Typography>
+
+              {/* Governing Law */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                12. Governing Law
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                These terms shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in Belgaum, Karnataka.
+              </Typography>
+
+              {/* Changes to Terms */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                13. Changes to Terms
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on our website. Your continued use of our services constitutes acceptance of the modified terms.
+              </Typography>
+
+              {/* Contact Information */}
+              <Typography variant="h5" color="primary" gutterBottom sx={{ fontWeight: 700, marginTop: '32px', marginBottom: '24px' }}>
+                14. Contact Information
+              </Typography>
+              <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
+                If you have any questions about these Terms of Service, please contact us:
+              </Typography>
+              <Typography variant="body1" component="div" sx={{ marginLeft: '20px', marginBottom: '20px' }}>
+                <strong>Laxmi Dodamani</strong><br/>
+                Email: contact@laxmidodamani.com<br/>
+                Location: Belgaum, Karnataka, India
+              </Typography>
+
+              {/* Document Footer */}
+              <Typography variant="body2" color="text.secondary" sx={{ marginTop: '40px', textAlign: 'center', fontStyle: 'italic' }}>
+                These Terms of Service are effective as of December 1, 2024, and will remain in effect except with respect to any changes in its provisions in the future.
+              </Typography>
+            </Paper>
+          </motion.div>
         </motion.div>
       </Container>
     </>

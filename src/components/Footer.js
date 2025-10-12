@@ -1,118 +1,349 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, Link, Divider, useTheme, useMediaQuery } from '@mui/material';
-import { Phone, Email, LocationOn, WhatsApp } from '@mui/icons-material';
+import { Container, Typography, Link, Grid } from '@mui/material';
+import { motion } from 'framer-motion';
+import { 
+  Email, 
+  LocationOn, 
+  WhatsApp,
+  Facebook,
+  Instagram,
+  LinkedIn,
+  Twitter
+} from '@mui/icons-material';
 
 const Footer = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  const services = [
-    { title: 'LIC Services', items: ['Policy Consultation', 'Claim Settlement', 'Policy Renewal', 'Maturity Handling'] },
-    { title: 'Star Health', items: ['Health Insurance', 'Cashless Claims', 'Policy Support', 'Hospital Network'] },
-    { title: 'Dareshwar Kitchen', items: ['Traditional Ladoos', 'Festival Specials', 'Bulk Orders', 'Custom Orders'] },
+  const socialLinks = [
+    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: LinkedIn, href: '#', label: 'LinkedIn' },
+    { icon: Twitter, href: '#', label: 'Twitter' },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 15
+      }
+    }
+  };
+
   return (
-    <Box
-      component="footer"
-      sx={{
-        backgroundColor: 'background.paper',
-        boxShadow: '0 -2px 10px rgba(0,0,0,0.08)',
-        pt: 6,
-        pb: 3,
+    <motion.footer
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      style={{
+        background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
+        borderTop: '1px solid #E2E8F0',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={4}>
-          {/* Contact Information */}
+      {/* Animated Background Elements */}
+      <div style={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        background: `
+          radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)
+        `,
+        animation: 'float 15s ease-in-out infinite',
+      }} />
+
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+        <Grid container spacing={4} sx={{ py: 6 }}>
+          {/* Company Info */}
           <Grid item xs={12} md={4}>
-            <Typography variant="h6" color="primary" gutterBottom>
-              Contact Information
-            </Typography>
-            <Box sx={{ mt: 2 }}>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                <Phone color="primary" sx={{ mr: 1 }} />
-                <Link href="tel:contact" color="text.secondary" underline="hover">
-                  Contact for Phone Number
-                </Link>
-              </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                <WhatsApp color="primary" sx={{ mr: 1 }} />
-                <Link href="https://wa.me/contact" color="text.secondary" underline="hover">
-                  WhatsApp Chat
-                </Link>
-              </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                <Email color="primary" sx={{ mr: 1 }} />
-                <Link href="mailto:contact@example.com" color="text.secondary" underline="hover">
-                  contact@example.com
-                </Link>
-              </Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                <LocationOn color="primary" sx={{ mr: 1, mt: 0.3 }} />
-                <Typography variant="body" color="text.secondary" sx={{ mr: 1, mt: 0.3 }} >
-                  Vijayapura, Karnataka, India
-                </Typography>
-              </Box>
-            </Box>
+            <motion.div variants={itemVariants}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                style={{ marginBottom: '24px' }}
+              >
+                <motion.img
+                  src="/assets/1000174754.png"
+                  alt="Laxmi Dodamani"
+                  style={{
+                    height: '80px',
+                    filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.2))',
+                  }}
+                  whileHover={{ 
+                    filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.3))',
+                    transition: { duration: 0.3 }
+                  }}
+                />
+              </motion.div>
+              
+              <Typography 
+                variant="h6" 
+                color="text.primary" 
+                gutterBottom
+                sx={{ fontWeight: 600, marginBottom: '16px' }}
+              >
+                Laxmi Dodamani
+              </Typography>
+              
+              <Typography 
+                variant="body2" 
+                color="text.secondary"
+                sx={{ lineHeight: 1.6, marginBottom: '24px' }}
+              >
+                Your trusted partner for insurance services and traditional homemade delicacies. 
+                Over 20 years of experience in securing your future and satisfying your taste buds.
+              </Typography>
+
+              {/* Social Links */}
+              <div style={{ display: 'flex', gap: '16px' }}>
+                {socialLinks.map((social, index) => (
+                  <motion.div
+                    key={social.label}
+                    whileHover={{ 
+                      scale: 1.2, 
+                      y: -4,
+                      transition: { type: "spring", stiffness: 300 }
+                    }}
+                    whileTap={{ scale: 0.9 }}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <Link
+                      href={social.href}
+                      color="inherit"
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        width: '40px',
+                        height: '40px',
+                        borderRadius: '50%',
+                        background: 'rgba(59, 130, 246, 0.1)',
+                        border: '1px solid rgba(59, 130, 246, 0.2)',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          background: 'rgba(59, 130, 246, 0.2)',
+                          transform: 'translateY(-2px)',
+                          boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                        }
+                      }}
+                    >
+                      <social.icon sx={{ fontSize: '1.2rem' }} />
+                    </Link>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
           </Grid>
 
-          {/* Services */}
-          {services.map((service, index) => (
-            <Grid item xs={12} sm={6} md={2.5} key={index}>
-              <Typography variant="h6" color="primary" gutterBottom>
-                {service.title}
+          {/* Quick Links */}
+          <Grid item xs={12} md={4}>
+            <motion.div variants={itemVariants}>
+              <Typography 
+                variant="h6" 
+                color="text.primary" 
+                gutterBottom
+                sx={{ fontWeight: 600, marginBottom: '24px' }}
+              >
+                Quick Links
               </Typography>
-              <Box sx={{ mt: 2 }}>
-                {service.items.map((item, idx) => (
-                  <Typography
-                    key={idx}
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{
-                      mb: 1,
-                      '&:hover': {
-                        color: 'primary.main',
-                        cursor: 'pointer',
-                      },
-                    }}
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {[
+                  { href: '/', label: 'Home' },
+                  { href: '/dareshwar-kitchen', label: 'Dareshwar Kitchen' },
+                  { href: '/lic-services', label: 'LIC Services' },
+                  { href: '/star-health', label: 'Star Health' },
+                ].map((link, index) => (
+                  <motion.div
+                    key={link.label}
+                    whileHover={{ x: 8 }}
+                    whileTap={{ scale: 0.95 }}
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    {item}
-                  </Typography>
+                    <Link
+                      href={link.href}
+                      color="text.secondary"
+                      underline="none"
+                      sx={{
+                        display: 'block',
+                        padding: '8px 0',
+                        transition: 'all 0.3s ease',
+                        position: 'relative',
+                        '&:hover': {
+                          color: 'primary.main',
+                          transform: 'translateX(4px)',
+                        },
+                        '&::before': {
+                          content: '""',
+                          position: 'absolute',
+                          left: 0,
+                          top: '50%',
+                          width: '0%',
+                          height: '2px',
+                          background: 'linear-gradient(90deg, #3B82F6, #8B5CF6)',
+                          transition: 'width 0.3s ease',
+                          transform: 'translateY(-50%)',
+                        },
+                        '&:hover::before': {
+                          width: '100%',
+                        },
+                      }}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
                 ))}
-              </Box>
-            </Grid>
-          ))}
+              </div>
+            </motion.div>
+          </Grid>
+
+          {/* Contact Info */}
+          <Grid item xs={12} md={4}>
+            <motion.div variants={itemVariants}>
+              <Typography 
+                variant="h6" 
+                color="text.primary" 
+                gutterBottom
+                sx={{ fontWeight: 600, marginBottom: '24px' }}
+              >
+                Contact Information
+              </Typography>
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+                <motion.div
+                  whileHover={{ scale: 1.02, x: 4 }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '12px' }}
+                >
+                  <LocationOn 
+                    sx={{ 
+                      color: 'text.secondary',
+                      fontSize: '1.5rem'
+                    }} 
+                  />
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ lineHeight: 1.4 }}
+                  >
+                    Belgaum, Karnataka, India
+                  </Typography>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.02, x: 4 }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '12px' }}
+                >
+                  <Email 
+                    sx={{ 
+                      color: 'text.secondary',
+                      fontSize: '1.5rem'
+                    }} 
+                  />
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ lineHeight: 1.4 }}
+                  >
+                    Contact via website form
+                  </Typography>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.02, x: 4 }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '12px' }}
+                >
+                  <WhatsApp 
+                    sx={{ 
+                      color: 'text.secondary',
+                      fontSize: '1.5rem'
+                    }} 
+                  />
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ lineHeight: 1.4 }}
+                  >
+                    WhatsApp available
+                  </Typography>
+                </motion.div>
+              </div>
+            </motion.div>
+          </Grid>
         </Grid>
 
-        <Divider sx={{ mt: 4, mb: 3 }} />
-
         {/* Bottom Section */}
-        <Box sx={{ 
-          display: 'flex', 
-          flexDirection: isMobile ? 'column' : 'row',
-          justifyContent: 'space-between',
-          alignItems: isMobile ? 'center' : 'flex-start',
-          textAlign: isMobile ? 'center' : 'left',
-        }}>
-          <Typography variant="body2" color="text.secondary">
+        <motion.div
+          variants={itemVariants}
+          style={{
+            borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+            paddingTop: '24px',
+            marginTop: '32px',
+            textAlign: 'center',
+          }}
+        >
+          <Typography 
+            variant="body2" 
+            color="text.secondary"
+            sx={{ marginBottom: '16px' }}
+          >
             © {new Date().getFullYear()} Laxmi Dodamani. All rights reserved.
           </Typography>
-          <Box sx={{ 
-            display: 'flex', 
-            gap: 3,
-            mt: isMobile ? 2 : 0 
-          }}>
-            <Link href="/privacy-policy" color="text.secondary" underline="hover">
-              Privacy Policy
-            </Link>
-            <Link href="/terms-of-service" color="text.secondary" underline="hover">
-              Terms of Service
-            </Link>
-          </Box>
-        </Box>
+          
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '24px', flexWrap: 'wrap' }}>
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Link 
+                href="/privacy-policy" 
+                color="text.secondary" 
+                underline="none"
+                sx={{
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    color: 'primary.main',
+                  }
+                }}
+              >
+                Privacy Policy
+              </Link>
+            </motion.div>
+            
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Link 
+                href="/terms-of-service" 
+                color="text.secondary" 
+                underline="none"
+                sx={{
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    color: 'primary.main',
+                  }
+                }}
+              >
+                Terms of Service
+              </Link>
+            </motion.div>
+          </div>
+        </motion.div>
       </Container>
-    </Box>
+    </motion.footer>
   );
 };
 
