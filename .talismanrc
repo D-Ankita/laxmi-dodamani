@@ -3,18 +3,24 @@ fileignoreconfig:
   checksum: 33c20430120f588b6b50a02fa4ac1a7a9d6103c7f745281c9cadeb3ebfbef6c2
 - filename: build/static/js/main.0ceab329.js.map
   checksum: e96d1327ffdb722b416b24f480a24d489bdb9fd1533ed6ad6bfb9a2b1ccb7ce2
+- filename: build/static/js/main.04bcc5eb.js.map
+  checksum: 19dbaff05f315908d4ea884894eac766c5e448871535a99eecfce574718d96c7
 - filename: build/index.html
-  checksum: 0ced4b248d51ce4ffce1a47ec83d11b463f94153601dde802ca803bc71f1ef3f
+  checksum: c3cb81edf530b47dd454fbc7f6576d38d636fcd44d67549055014bc408731d38
 - filename: src/components/Navbar.js
   checksum: 4426625e8448191191392f0b714d8e69928cc454d99740a08165f1b5ceddc20e
 - filename: build/static/css/main.0b694cf9.css
   checksum: ddd037c0787d2b7fc7a6264bad5d978516d996b615eafb67b2e30d43262c474b
+- filename: build/static/css/main.d1e61665.css
+  checksum: db1719188c2adf1caae27ae29f24c1ce53da170a22797cd903298a31d6a4860c
 - filename: src/pages/PrivacyPolicy.js
   checksum: b7aa73e4d8618d7c7172025d4ee77992358986d5f9796b1623e7a680251edd48
 - filename: src/components/Footer.js
   checksum: 89a4a6b2f2fb8d4def28995046b34396e65ab95a5525f9fb5a00e209eb6ed27b
 - filename: build/static/css/main.0b694cf9.css.map
   checksum: 139c2ab1e9bbc27ea599b7ce5f0d8fee3b8641acd057d3f8233962fe0fd8c400
+- filename: build/static/css/main.d1e61665.css.map
+  checksum: 36118d719adccb575975b8cc757006f10ddbb02822ce938488be33c20b1909bb
 - filename: src/pages/StarHealth.js
   checksum: a9cd100f1fb86a982b40d98505172695422d84c5734adfec7b49a140070fe730
 - filename: src/pages/DareshwarKitchen.js
