@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/laxmi-dodamani/static/css/main.d1e61665.css",
-    "main.js": "/laxmi-dodamani/static/js/main.c743b4ae.js",
-    "index.html": "/laxmi-dodamani/index.html",
-    "main.d1e61665.css.map": "/laxmi-dodamani/static/css/main.d1e61665.css.map",
-    "main.c743b4ae.js.map": "/laxmi-dodamani/static/js/main.c743b4ae.js.map"
+    "main.css": "/me/static/css/main.d1e61665.css",
+    "main.js": "/me/static/js/main.c743b4ae.js",
+    "index.html": "/me/index.html",
+    "main.d1e61665.css.map": "/me/static/css/main.d1e61665.css.map",
+    "main.c743b4ae.js.map": "/me/static/js/main.c743b4ae.js.map"
   },
   "entrypoints": [
     "static/css/main.d1e61665.css",
