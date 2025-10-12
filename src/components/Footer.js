@@ -82,7 +82,7 @@ const Footer = () => {
                 style={{ marginBottom: '24px' }}
               >
                 <motion.img
-                  src="/assets/1000174754.png"
+                  src={`${process.env.PUBLIC_URL}/assets/1000174754.png`}
                   alt="Laxmi Dodamani"
                   style={{
                     height: '80px',

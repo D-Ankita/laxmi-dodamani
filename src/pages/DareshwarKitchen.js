@@ -312,7 +312,7 @@ const DareshwarKitchen = () => {
                 style={{ marginBottom: '32px' }}
               >
                 <img 
-                  src="/assets/DareshwarKitchen.png" 
+                  src={`${process.env.PUBLIC_URL}/assets/DareshwarKitchen.png`} 
                   alt="Dareshwar Kitchen Logo"
                   style={{ 
                     width: '120px', 
@@ -465,7 +465,7 @@ const DareshwarKitchen = () => {
                         {/* Front of Card */}
                         <div className="flip-card-front">
                           <motion.img
-                            src={product.image}
+                            src={`${process.env.PUBLIC_URL}${product.image}`}
                             alt={product.name}
                             className="product-card-image"
                             whileHover={{ 
@@ -713,7 +713,7 @@ const DareshwarKitchen = () => {
                 }}>
                   <Box
                     component="img"
-                    src={selectedProduct.image}
+                    src={`${process.env.PUBLIC_URL}${selectedProduct.image}`}
                     alt={selectedProduct.name}
                     sx={{
                       width: '100%',

@@ -233,7 +233,7 @@ const StarHealth = () => {
               style={{ marginBottom: '32px' }}
             >
               <img 
-                src="/assets/Star_Health.png" 
+                src={`${process.env.PUBLIC_URL}/assets/Star_Health.png`} 
                 alt="Star Health Logo"
                 style={{ 
                   width: '120px', 

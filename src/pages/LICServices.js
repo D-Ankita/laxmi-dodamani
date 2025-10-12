@@ -232,7 +232,7 @@ const LICServices = () => {
               style={{ marginBottom: '32px' }}
             >
               <img 
-                src="/assets/LIC.png" 
+                src={`${process.env.PUBLIC_URL}/assets/LIC.png`} 
                 alt="LIC Logo"
                 style={{ 
                   width: '120px', 
