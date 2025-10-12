@@ -83,7 +83,7 @@ const DareshwarKitchen = () => {
     {
       icon: LocalShipping,
       title: "Delivery & Pick Up",
-      description: "Convenient delivery to your doorstep or pick up from our location. Available throughout Vijayapura and surrounding areas."
+      description: "Convenient delivery to your doorstep or pick up from our location. "
     },
     {
       icon: ShoppingCart,
@@ -312,7 +312,7 @@ const DareshwarKitchen = () => {
                 style={{ marginBottom: '32px' }}
               >
                 <img 
-                  src={`${process.env.PUBLIC_URL}/assets/DareshwarKitchen.png`} 
+                  src={`${process.env.PUBLIC_URL}/assets/DareshwarKitchen_logo.png`} 
                   alt="Dareshwar Kitchen Logo"
                   style={{ 
                     width: '120px', 
