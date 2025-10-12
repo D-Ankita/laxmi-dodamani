@@ -6,7 +6,6 @@ import {
   Security, 
   Star, 
   EmojiEvents,
-  Psychology,
   Business,
   Favorite
 } from '@mui/icons-material';
@@ -54,12 +53,12 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Laxmi Dodamani",
-    "description": "Insurance services and homemade traditional delicacies in Belgaum, Karnataka",
+    "description": "Insurance services and homemade traditional delicacies in Vijayapura, Karnataka",
     "url": "https://laxmi-dodamani.netlify.app",
     "telephone": "",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Belgaum",
+      "addressLocality": "Vijayapura",
       "addressRegion": "Karnataka",
       "addressCountry": "IN"
     },
@@ -161,8 +160,8 @@ const Home = () => {
     <>
       <SEO 
         title="Insurance Services & Homemade Delicacies"
-        description="Laxmi Dodamani offers 20+ years of insurance expertise in LIC and Star Health services, plus traditional homemade delicacies through Dareshwar Kitchen. Get expert insurance consultation and authentic homemade food in Belgaum."
-        keywords="LIC services, Star Health insurance, homemade ladoos, traditional food, insurance consultation, Belgaum, Karnataka, Dareshwar Kitchen"
+        description="Laxmi Dodamani offers 20+ years of insurance expertise in LIC and Star Health services, plus traditional homemade delicacies through Dareshwar Kitchen. Get expert insurance consultation and authentic homemade food in Vijayapura."
+        keywords="LIC services, Star Health insurance, homemade ladoos, traditional food, insurance consultation, Vijayapura, Karnataka, Dareshwar Kitchen"
         url="/"
         structuredData={structuredData}
       />

@@ -203,7 +203,7 @@ const TermsOfService = () => {
                 12. Governing Law
               </Typography>
               <Typography variant="body1" paragraph sx={{ marginBottom: '20px', textAlign: 'justify' }}>
-                These terms shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in Belgaum, Karnataka.
+                These terms shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in Vijayapura, Karnataka.
               </Typography>
 
               {/* Changes to Terms */}
@@ -224,7 +224,7 @@ const TermsOfService = () => {
               <Typography variant="body1" component="div" sx={{ marginLeft: '20px', marginBottom: '20px' }}>
                 <strong>Laxmi Dodamani</strong><br/>
                 Email: contact@laxmidodamani.com<br/>
-                Location: Belgaum, Karnataka, India
+                Location: Vijayapura, Karnataka, India
               </Typography>
 
               {/* Document Footer */}

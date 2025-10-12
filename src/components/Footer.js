@@ -244,7 +244,7 @@ const Footer = () => {
                     color="text.secondary"
                     sx={{ lineHeight: 1.4 }}
                   >
-                    Belgaum, Karnataka, India
+                    Vijayapura, Karnataka, India
                   </Typography>
                 </motion.div>
 

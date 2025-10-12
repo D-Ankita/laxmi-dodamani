@@ -213,7 +213,7 @@ const PrivacyPolicy = () => {
               <Typography variant="body1" component="div" sx={{ marginLeft: '20px', marginBottom: '20px' }}>
                 <strong>Laxmi Dodamani</strong><br/>
                 Email: contact@laxmidodamani.com<br/>
-                Location: Belgaum, Karnataka, India
+                Location: Vijayapura, Karnataka, India
               </Typography>
 
               {/* Document Footer */}

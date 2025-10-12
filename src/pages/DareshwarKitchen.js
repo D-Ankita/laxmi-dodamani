@@ -10,7 +10,6 @@ import {
   EmojiEvents,
   Psychology,
   Business,
-  LocalOffer,
   Schedule,
   CheckCircle,
   RestaurantMenu,
@@ -46,7 +45,7 @@ const DareshwarKitchen = () => {
     "url": "https://laxmi-dodamani.netlify.app/dareshwar-kitchen",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Belgaum",
+      "addressLocality": "Vijayapura",
       "addressRegion": "Karnataka",
       "addressCountry": "IN"
     },
@@ -82,14 +81,14 @@ const DareshwarKitchen = () => {
 
   const services = [
     {
+      icon: LocalShipping,
+      title: "Delivery & Pick Up",
+      description: "Convenient delivery to your doorstep or pick up from our location. Available throughout Vijayapura and surrounding areas."
+    },
+    {
       icon: ShoppingCart,
       title: "Bulk Orders",
       description: "Special pricing for large quantities. Perfect for festivals, weddings, and corporate events."
-    },
-    {
-      icon: LocalShipping,
-      title: "Home Delivery",
-      description: "Convenient delivery to your doorstep. Available throughout Belgaum and surrounding areas."
     },
     {
       icon: Star,
@@ -294,7 +293,7 @@ const DareshwarKitchen = () => {
       <SEO 
         title="Dareshwar Kitchen - Traditional Homemade Delicacies"
         description="Discover authentic traditional homemade delicacies from Dareshwar Kitchen. Specializing in healthy ladoos, chakli, and festive treats made with pure ghee and premium ingredients."
-        keywords="homemade ladoos, traditional food, besan ladoo, ragi ladoo, til ladoo, chakli, murmura chivda, Belgaum, Karnataka"
+        keywords="homemade ladoos, traditional food, besan ladoo, ragi ladoo, til ladoo, chakli, murmura chivda, Vijayapura, Karnataka"
         url="/dareshwar-kitchen"
         structuredData={structuredData}
       />
@@ -347,7 +346,7 @@ const DareshwarKitchen = () => {
                   margin: '0 auto 32px'
                 }}
               >
-                Traditional homemade delicacies crafted with love and premium ingredients. 
+                Cloud kitchen started in 2015. Traditional homemade delicacies crafted with love and premium ingredients. 
                 Every bite brings the authentic taste of Indian tradition to your table.
               </Typography>
               

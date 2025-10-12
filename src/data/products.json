@@ -44,7 +44,7 @@
       },
       "rating": 4.8,
       "reviews": 245,
-      "storageInfo": "Store in an airtight container. Stays fresh for up to 15 days at room temperature."
+      "storageInfo": "Store in an airtight container. Stays fresh for up to 60 days at room temperature."
     },
     {
       "id": "green-moong-ladoo",
@@ -90,7 +90,7 @@
       },
       "rating": 4.7,
       "reviews": 189,
-      "storageInfo": "Keep refrigerated for extended shelf life. Stays fresh for up to 20 days."
+      "storageInfo": "Store in airtight container. Stays fresh for 30-45 days."
     },
     {
       "id": "dinka-ladoo",
@@ -100,8 +100,8 @@
         "1kg": 600
       },
       "image": "/assets/products/dinka_ladoo_1.png",
-      "description": "Special ladoo made with premium ingredients",
-      "detailedDescription": "Traditional winter special ladoos made with edible gum and dry fruits. These ladoos are particularly popular during winter months and are known for their warming properties and health benefits.",
+      "description": "Special ladoo made with premium ingredients. No wheat flour, no sugar.",
+      "detailedDescription": "Traditional winter special ladoos made with edible gum and dry fruits. These ladoos are particularly popular during winter months and are known for their warming properties and health benefits. Made without wheat flour or sugar, using organic jaggery.",
       "servingSuggestion": "Consume 1-2 ladoos daily during winter months.",
       "bestFor": [
         "Winter consumption",
@@ -114,10 +114,13 @@
       "ingredients": [
         "Premium edible gum (Dinka)",
         "Pure Ghee",
-        "Wheat flour",
-        "Almonds",
-        "Cashews",
-        "Sugar"
+        "Organic jaggery (gud)",
+        "Khaskhas (poppy seeds)",
+        "Til (sesame seeds)",
+        "Kharik (dates)",
+        "Kismis (raisins)",
+        "Walnut",
+        "Cardamom"
       ],
       "benefits": [
         "Excellent for bone health",
@@ -193,8 +196,8 @@
         "1kg": 300
       },
       "image": "/assets/products/rawa_ladoo_1.png",
-      "description": "Delicate ladoo made with roasted semolina",
-      "detailedDescription": "Light and delicious ladoos made with roasted semolina and fresh coconut. These ladoos have a unique texture and are perfect for those who prefer lighter sweets.",
+      "description": "Delicate ladoo made with roasted semolina. No coconut.",
+      "detailedDescription": "Light and delicious ladoos made with roasted semolina. These ladoos have a unique texture and are perfect for those who prefer lighter sweets. Made without coconut.",
       "servingSuggestion": "Best enjoyed with afternoon tea or as a light dessert.",
       "bestFor": [
         "Light snacking",
@@ -209,7 +212,7 @@
         "Pure Ghee",
         "Sugar",
         "Cardamom powder",
-        "Grated coconut",
+        "Raisins",
         "Cashews"
       ],
       "benefits": [
@@ -322,7 +325,7 @@
       },
       "rating": 4.8,
       "reviews": 198,
-      "storageInfo": "Store in cool, dry place. Stays fresh for up to 15 days."
+      "storageInfo": "Store in cool, dry place. Stays fresh for up to 30 days."
     },
     {
       "id": "methi-ladoo",
@@ -332,8 +335,8 @@
         "1kg": 600
       },
       "image": "/assets/products/methi_ladoo_1.png",
-      "description": "Healthy ladoo with fenugreek seeds",
-      "detailedDescription": "Traditional medicinal ladoos made with fenugreek seeds and wholesome ingredients. These ladoos are particularly beneficial for new mothers and those looking for health benefits along with taste.",
+      "description": "Healthy ladoo with fenugreek seeds and nutritious ingredients",
+      "detailedDescription": "Traditional medicinal ladoos made with fenugreek seeds and wholesome ingredients including green moong powder, dinka, and halim. These ladoos are particularly beneficial for new mothers and those looking for health benefits along with taste.",
       "servingSuggestion": "Take 1-2 ladoos daily, preferably in the morning.",
       "bestFor": [
         "New mothers",
@@ -344,8 +347,11 @@
         "Women's health"
       ],
       "ingredients": [
-        "Fenugreek seeds",
-        "Whole wheat flour",
+        "Fenugreek seeds (Methi)",
+        "Green moong powder",
+        "Kharik powder (dates)",
+        "Dinka (edible gum)",
+        "Halim (garden cress seeds)",
         "Pure Ghee",
         "Jaggery",
         "Dry fruits"
@@ -472,8 +478,8 @@
         "1kg": 400
       },
       "image": "/assets/products/chakli_1.png",
-      "description": "Spiral-shaped crispy snack made with rice flour",
-      "detailedDescription": "A spiral-shaped crispy snack made with a perfect blend of rice flour and spices. Our Chaklis are hand-crafted to achieve the perfect spiral shape and crispiness that lasts longer.",
+      "description": "Spiral-shaped crispy snack. No ghee, fried in cold pressed oil.",
+      "detailedDescription": "A spiral-shaped crispy snack made with a perfect blend of rice flour and spices. Our Chaklis are hand-crafted to achieve the perfect spiral shape and crispiness that lasts longer. Fried in cold pressed oil.",
       "servingSuggestion": "Best enjoyed with hot tea or coffee.",
       "bestFor": [
         "Tea time snack",
@@ -485,8 +491,9 @@
       ],
       "ingredients": [
         "Rice flour",
+        "Roasted chana dal powder",
         "Urad dal flour",
-        "Pure Ghee",
+        "Cold pressed oil (for frying)",
         "Sesame seeds",
         "Spices",
         "Cumin seeds"

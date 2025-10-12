@@ -7,7 +7,6 @@ import {
   Payment, 
   Support,
   EmojiEvents,
-  Psychology,
   Business,
   CheckCircle,
   Star,
@@ -65,14 +64,14 @@ const StarHealth = () => {
       "name": "Laxmi Dodamani",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Belgaum",
+        "addressLocality": "Vijayapura",
         "addressRegion": "Karnataka",
         "addressCountry": "IN"
       }
     },
     "areaServed": {
       "@type": "City",
-      "name": "Belgaum"
+      "name": "Vijayapura"
     },
     "serviceType": "Health Insurance Services",
     "hasOfferCatalog": {
@@ -107,7 +106,7 @@ const StarHealth = () => {
   const services = [
     {
       icon: HealthAndSafety,
-      title: "Health Insurance Consultation",
+      title: "Free Consultation",
       description: "Expert guidance on choosing the right health insurance policy for you and your family.",
       features: ["Policy comparison", "Coverage analysis", "Premium optimization", "Family planning"]
     },
@@ -125,9 +124,9 @@ const StarHealth = () => {
     },
     {
       icon: Support,
-      title: "Hospital Network Support",
-      description: "Access to extensive network of hospitals and healthcare providers across India.",
-      features: ["Wide network", "Quality care", "Easy access", "Emergency support"]
+      title: "Policy Renewal",
+      description: "Smooth policy renewal process with premium payment assistance and status updates.",
+      features: ["Premium reminders", "Renewal assistance", "Online payment", "Status tracking"]
     }
   ];
 
@@ -210,8 +209,8 @@ const StarHealth = () => {
     <>
       <SEO 
         title="Star Health Insurance Services - Expert Health Coverage"
-        description="Professional Star Health insurance services with 20+ years experience. Expert health insurance consultation, cashless claims, hospital network support, and complete health coverage solutions in Belgaum."
-        keywords="Star Health insurance, health insurance consultation, cashless claims, hospital network, health coverage, Belgaum, Karnataka"
+        description="Professional Star Health insurance services with 20+ years experience. Expert health insurance consultation, cashless claims, hospital network support, and complete health coverage solutions in Vijayapura."
+        keywords="Star Health insurance, health insurance consultation, cashless claims, hospital network, health coverage, Vijayapura, Karnataka"
         url="/star-health"
         structuredData={structuredData}
       />

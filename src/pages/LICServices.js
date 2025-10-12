@@ -8,7 +8,6 @@ import {
   Support,
   TrendingUp,
   EmojiEvents,
-  Psychology,
   Business,
   CheckCircle,
   Star
@@ -64,14 +63,14 @@ const LICServices = () => {
       "name": "Laxmi Dodamani",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Belgaum",
+        "addressLocality": "Vijayapura",
         "addressRegion": "Karnataka",
         "addressCountry": "IN"
       }
     },
     "areaServed": {
       "@type": "City",
-      "name": "Belgaum"
+      "name": "Vijayapura"
     },
     "serviceType": "Insurance Services",
     "hasOfferCatalog": {
@@ -106,27 +105,27 @@ const LICServices = () => {
   const services = [
     {
       icon: Assignment,
-      title: "Policy Consultation",
+      title: "Free Consultation",
       description: "Expert guidance on choosing the right LIC policy based on your needs and financial goals.",
       features: ["Personalized advice", "Policy comparison", "Financial planning", "Risk assessment"]
     },
     {
       icon: Payment,
       title: "Claim Settlement",
-      description: "Assistance with claim processing and settlement for death, maturity, and survival benefits.",
-      features: ["Documentation help", "Claim tracking", "Quick processing", "Expert guidance"]
+      description: "Assistance with claim processing and settlement for death claims, maturity benefits, and more.",
+      features: ["Death claim", "Maturity claim", "Documentation help", "Quick processing"]
     },
     {
       icon: TrendingUp,
-      title: "Policy Renewal",
-      description: "Smooth policy renewal process with premium payment assistance and status updates.",
-      features: ["Premium reminders", "Online payment", "Status tracking", "Renewal assistance"]
+      title: "Policy Renewal & Revival",
+      description: "Smooth policy renewal process and revival assistance for lapsed policies.",
+      features: ["Premium reminders", "Renewal assistance", "Policy revival", "Status tracking"]
     },
     {
       icon: Support,
-      title: "Policy Management",
-      description: "Complete policy management including nomination changes, address updates, and more.",
-      features: ["Nomination changes", "Address updates", "Policy modifications", "Customer support"]
+      title: "Policy Updates",
+      description: "Complete policy management including nomination, address, and mobile number changes.",
+      features: ["Nomination change", "Address change", "Mobile number change", "Policy modifications"]
     }
   ];
 
@@ -209,8 +208,8 @@ const LICServices = () => {
     <>
       <SEO 
         title="LIC Insurance Services - Expert Consultation & Claims"
-        description="Professional LIC insurance services with 20+ years experience. Expert policy consultation, claim settlement, renewal assistance, and complete policy management in Belgaum."
-        keywords="LIC services, insurance consultation, claim settlement, policy renewal, LIC agent, Belgaum, Karnataka"
+        description="Professional LIC insurance services with 20+ years experience. Expert policy consultation, claim settlement, renewal assistance, and complete policy management in Vijayapura."
+        keywords="LIC services, insurance consultation, claim settlement, policy renewal, LIC agent, Vijayapura, Karnataka"
         url="/lic-services"
         structuredData={structuredData}
       />
