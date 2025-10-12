@@ -1,6 +1,6 @@
 # Laxmi Dodamani
 
-Welcome to the official website of **Laxmi Dodamani** - Your trusted partner for insurance solutions and authentic homemade delicacies in Belgaum, Karnataka.
+Welcome to the official website of **Laxmi Dodamani** - Your trusted partner for insurance solutions and authentic homemade delicacies in Vijayapura, Karnataka.
 
 ## 🌟 About
 
@@ -67,7 +67,7 @@ Traditional homemade delicacies made with love and pure ingredients:
 
 ## 📍 Location
 
-**Belgaum, Karnataka, India**
+**Vijayapura, Karnataka, India**
 
 ## 📞 Get in Touch
 
