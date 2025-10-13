@@ -517,6 +517,248 @@
       "rating": 4.7,
       "reviews": 189,
       "storageInfo": "Stays crispy for up to 1 month in airtight container."
+    },
+    {
+      "id": "millets-laddo-siridhanya",
+      "name": "Millets Laddo [Siridhanya]",
+      "price": {
+        "250g": 140,
+        "500g": 270,
+        "1kg": 520
+      },
+      "image": "/assets/products/millets_ladoo_1.png",
+      "description": "Nutritious ladoo made with ancient siridhanya millets",
+      "detailedDescription": "A superfood ladoo made with Siridhanya (ancient millets) that are known for their exceptional nutritional value. These ladoos are made with a blend of positive millets like foxtail, little, kodo, and barnyard millets combined with pure ghee and natural sweeteners.",
+      "servingSuggestion": "Perfect for breakfast or as a healthy energy snack throughout the day.",
+      "bestFor": [
+        "Health conscious individuals",
+        "Diabetic-friendly option",
+        "Weight management",
+        "Children's nutrition",
+        "Gluten-free diet",
+        "Post-workout recovery"
+      ],
+      "ingredients": [
+        "Siridhanya millets (foxtail, little, kodo, barnyard)",
+        "Pure Ghee",
+        "Organic jaggery",
+        "Dry fruits",
+        "Cardamom powder"
+      ],
+      "benefits": [
+        "Rich in antioxidants",
+        "High in fiber and protein",
+        "Gluten-free and diabetic-friendly",
+        "Improves digestion",
+        "Boosts immunity",
+        "Regulates blood sugar"
+      ],
+      "nutritionalValue": {
+        "Protein": "8g per 100g",
+        "Fat": "20g per 100g",
+        "Carbs": "58g per 100g",
+        "Calories": "410 per 100g",
+        "Fiber": "5g per 100g",
+        "Iron": "3mg per 100g"
+      },
+      "rating": 4.9,
+      "reviews": 203,
+      "storageInfo": "Store in airtight container. Stays fresh for up to 45 days."
+    },
+    {
+      "id": "sweet-shankarpali",
+      "name": "Sweet Shankarpali",
+      "price": {
+        "250g": 80,
+        "500g": 160,
+        "1kg": 300
+      },
+      "image": "/assets/products/sweet_shankarpali_1.png",
+      "description": "Traditional crispy diamond-shaped sweet snack",
+      "detailedDescription": "A traditional Maharashtrian sweet snack that's crispy and delicious. Sweet Shankarpali is made with refined flour, ghee, and sugar, deep-fried to golden perfection. These diamond-shaped delights are perfect for festivals and special occasions.",
+      "servingSuggestion": "Enjoy with tea or coffee as an evening snack.",
+      "bestFor": [
+        "Festival celebrations",
+        "Tea time snack",
+        "Festive gifting",
+        "Party treats",
+        "Diwali special",
+        "Kids favorite"
+      ],
+      "ingredients": [
+        "Refined flour (Maida)",
+        "Pure Ghee",
+        "Sugar",
+        "Cardamom powder",
+        "Milk",
+        "Oil for frying"
+      ],
+      "benefits": [
+        "Quick energy source",
+        "Long shelf life",
+        "Satisfies sweet cravings",
+        "Perfect for celebrations",
+        "Traditional taste",
+        "Crispy texture"
+      ],
+      "nutritionalValue": {
+        "Protein": "4g per 100g",
+        "Fat": "18g per 100g",
+        "Carbs": "72g per 100g",
+        "Calories": "440 per 100g",
+        "Fiber": "1.5g per 100g",
+        "Calcium": "60mg per 100g"
+      },
+      "rating": 4.6,
+      "reviews": 187,
+      "storageInfo": "Stays crispy for up to 2 months in airtight container."
+    },
+    {
+      "id": "salty-shankarpali",
+      "name": "Salty Shankarpali",
+      "price": {
+        "250g": 70,
+        "500g": 140,
+        "1kg": 280
+      },
+      "image": "/assets/products/salty_shankarpali_1.png",
+      "description": "Crispy savory diamond-shaped snack with spices",
+      "detailedDescription": "A savory version of the traditional Shankarpali, seasoned with the perfect blend of spices. These crispy, diamond-shaped bites are addictively crunchy and make for an excellent tea-time companion or party snack.",
+      "servingSuggestion": "Best enjoyed with hot tea or as a standalone snack.",
+      "bestFor": [
+        "Savory snacking",
+        "Tea time companion",
+        "Travel food",
+        "Party snacks",
+        "Evening munching",
+        "Savory cravings"
+      ],
+      "ingredients": [
+        "Refined flour (Maida)",
+        "Pure Ghee",
+        "Carom seeds (Ajwain)",
+        "Cumin seeds",
+        "Black pepper",
+        "Salt",
+        "Oil for frying"
+      ],
+      "benefits": [
+        "Digestive-friendly spices",
+        "Long lasting crunch",
+        "Quick snack option",
+        "Satisfies savory cravings",
+        "Perfect for snacking",
+        "Easy to store"
+      ],
+      "nutritionalValue": {
+        "Protein": "5g per 100g",
+        "Fat": "16g per 100g",
+        "Carbs": "70g per 100g",
+        "Calories": "420 per 100g",
+        "Fiber": "2g per 100g",
+        "Iron": "1.5mg per 100g"
+      },
+      "rating": 4.7,
+      "reviews": 195,
+      "storageInfo": "Maintains crispiness for up to 2 months in airtight container."
+    },
+    {
+      "id": "sweet-chirote",
+      "name": "Sweet Chirote",
+      "price": {
+        "250g": 130,
+        "500g": 260,
+        "1kg": 500
+      },
+      "image": "/assets/products/sweet_chirote_1.png",
+      "description": "Delicate layered sweet pastry, a festive specialty",
+      "detailedDescription": "Sweet Chirote is a traditional Maharashtrian delicacy with multiple crispy layers, dusted with powdered sugar. This delicate pastry requires skill and patience to make, resulting in a melt-in-mouth texture that's simply irresistible.",
+      "servingSuggestion": "Serve as a special dessert or with evening tea.",
+      "bestFor": [
+        "Special occasions",
+        "Festival celebrations",
+        "Diwali special",
+        "Wedding treats",
+        "Premium gifting",
+        "Traditional dessert"
+      ],
+      "ingredients": [
+        "Refined flour (Maida)",
+        "Pure Ghee",
+        "Milk",
+        "Powdered sugar",
+        "Cardamom powder",
+        "Oil for deep frying"
+      ],
+      "benefits": [
+        "Traditional delicacy",
+        "Unique texture",
+        "Premium quality",
+        "Festival special",
+        "Authentic taste",
+        "Long shelf life"
+      ],
+      "nutritionalValue": {
+        "Protein": "4g per 100g",
+        "Fat": "22g per 100g",
+        "Carbs": "68g per 100g",
+        "Calories": "460 per 100g",
+        "Fiber": "1g per 100g",
+        "Calcium": "55mg per 100g"
+      },
+      "rating": 4.8,
+      "reviews": 176,
+      "storageInfo": "Stays fresh and crispy for up to 1.5 months in airtight container."
+    },
+    {
+      "id": "salty-chirote",
+      "name": "Salty Chirote",
+      "price": {
+        "250g": 110,
+        "500g": 220,
+        "1kg": 400
+      },
+      "image": "/assets/products/salty_chirote_1.png",
+      "description": "Crispy layered savory pastry with aromatic spices",
+      "detailedDescription": "A savory twist to the traditional Chirote, featuring multiple flaky layers infused with aromatic spices. This delicate pastry combines the perfect balance of crispy texture and savory flavors, making it an irresistible snack.",
+      "servingSuggestion": "Perfect accompaniment with tea, coffee, or as a standalone snack.",
+      "bestFor": [
+        "Savory snacking",
+        "Tea time special",
+        "Festival treats",
+        "Party snacks",
+        "Premium gifting",
+        "Special occasions"
+      ],
+      "ingredients": [
+        "Refined flour (Maida)",
+        "Pure Ghee",
+        "Milk",
+        "Carom seeds (Ajwain)",
+        "Cumin seeds",
+        "Black pepper",
+        "Salt",
+        "Oil for deep frying"
+      ],
+      "benefits": [
+        "Premium quality snack",
+        "Digestive spices",
+        "Flaky and crispy",
+        "Traditional recipe",
+        "Long shelf life",
+        "Authentic taste"
+      ],
+      "nutritionalValue": {
+        "Protein": "5g per 100g",
+        "Fat": "20g per 100g",
+        "Carbs": "66g per 100g",
+        "Calories": "440 per 100g",
+        "Fiber": "1.5g per 100g",
+        "Iron": "1.8mg per 100g"
+      },
+      "rating": 4.7,
+      "reviews": 168,
+      "storageInfo": "Retains crispiness for up to 1.5 months in airtight container."
     }
   ]
 } 

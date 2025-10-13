@@ -309,16 +309,15 @@ const DareshwarKitchen = () => {
           <motion.div variants={itemVariants}>
             <div className="page-hero">
               <motion.div
-                style={{ marginBottom: '32px' }}
+                
               >
                 <img 
                   src={`${process.env.PUBLIC_URL}/assets/DareshwarKitchen_logo.png`} 
                   alt="Dareshwar Kitchen Logo"
                   style={{ 
-                    width: '120px', 
-                    height: '120px', 
+                    width: '200px', 
+                    height: '200px', 
                     objectFit: 'contain',
-                    marginBottom: '16px'
                   }}
                 />
               </motion.div>
