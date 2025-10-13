@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Services Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .banner {
+            width: 1200px;
+            height: 600px;
+            background: linear-gradient(135deg, #0066CC 0%, #003D7A 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        
+        .banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            padding-right: 30px;
+            border-right: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .logos-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .logo-wrapper {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 100px;
+            object-fit: contain;
+        }
+        
+        .agent-name {
+            font-size: 38px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+        }
+        
+        .right-section {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+            z-index: 2;
+        }
+        
+        .info-block {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-item {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .icon {
+            font-size: 28px;
+            margin-right: 15px;
+            min-width: 35px;
+        }
+        
+        .info-content h3 {
+            font-size: 16px;
+            color: #003D7A;
+            margin-bottom: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-content p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.7;
+            font-weight: 500;
+        }
+        
+        .phone-numbers {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .phone {
+            font-size: 22px;
+            color: #0066CC;
+            font-weight: bold;
+        }
+        
+        .services {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+        
+        .service-tag {
+            background: linear-gradient(135deg, #0066CC, #003D7A);
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="left-section">
+            <div class="logos-container">
+                <div class="logo-wrapper" style="width: 280px;">
+                    <img src="../public/assets/LIC.png" alt="LIC Logo" class="logo">
+                </div>
+                <div class="logo-wrapper" style="width: 280px;">
+                    <img src="../public/assets/Star_Health.png" alt="Star Health Logo" class="logo">
+                </div>
+            </div>
+            <div class="agent-name">Laxmi Mallikarjun<br>Dodamani</div>
+            <div class="title">Insurance Advisor</div>
+        </div>
+        
+        <div class="right-section">
+            <div class="info-block">
+                <div class="info-item">
+                    <div class="icon">📍</div>
+                    <div class="info-content">
+                        <h3>Office Address</h3>
+                        <p>Plot no 99, Rajendra Nagar 2nd Cross<br>
+                        Behind Adarsh Nagar Police Station<br>
+                        Solapur Road, Vijayapur - 586103</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">📞</div>
+                    <div class="info-content">
+                        <h3>Contact Numbers</h3>
+                        <div class="phone-numbers">
+                            <span class="phone">7021373684</span>
+                            <span class="phone">9975857988</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">🛡️</div>
+                    <div class="info-content">
+                        <h3>Services Offered</h3>
+                        <div class="services">
+                            <div class="service-tag">Life Insurance</div>
+                            <div class="service-tag">Health Insurance</div>
+                            <div class="service-tag">Policy Consultation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

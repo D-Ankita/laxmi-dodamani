@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import DareshwarKitchen from './pages/DareshwarKitchen';
 import LICServices from './pages/LICServices';
 import StarHealth from './pages/StarHealth';
+import Reviews from './pages/Reviews';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Footer from './components/Footer';
@@ -162,6 +163,7 @@ function App() {
                 <Route path="/dareshwar-kitchen" element={<DareshwarKitchen />} />
                 <Route path="/lic-services" element={<LICServices />} />
                 <Route path="/star-health" element={<StarHealth />} />
+                <Route path="/reviews" element={<Reviews />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="/terms-of-service" element={<TermsOfService />} />
               </Routes>

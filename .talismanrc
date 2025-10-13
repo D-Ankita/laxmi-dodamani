@@ -5,4 +5,10 @@ fileignoreconfig:
   checksum: .+
 - filename: package-lock.json
   checksum: .+
+- filename: AIRTABLE_SETUP_GUIDE.md
+  checksum: c62b2d613d98144bd91d615d98a92031553446848685d7ae614baaf4b7794e91
+- filename: REVIEWS_FEATURE.md
+  checksum: .+
+- filename: src/pages/Reviews.js
+  checksum: b3acd487afb11a6063ea763ec687b12632e1daf70821322ed1b796602f095fdf
 version: "1.0"

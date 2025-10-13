@@ -39,6 +39,7 @@ const Navbar = () => {
     { path: '/dareshwar-kitchen', label: 'Dareshwar Kitchen' },
     { path: '/lic-services', label: 'LIC Services' },
     { path: '/star-health', label: 'Star Health' },
+    { path: '/reviews', label: 'Reviews' },
   ];
 
   const handleDrawerToggle = () => {

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dareshwar Kitchen Banner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .banner {
+            width: 1200px;
+            height: 600px;
+            background: linear-gradient(135deg, #FFA500 0%, #FF6347 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .left-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            padding-right: 30px;
+            border-right: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .logo {
+            width: 280px;
+            height: 280px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        }
+        
+        .business-name {
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .right-section {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 40px;
+            z-index: 2;
+        }
+        
+        .info-block {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .icon {
+            font-size: 24px;
+            margin-right: 15px;
+            min-width: 30px;
+        }
+        
+        .info-content h3 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .info-content p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+        
+        .phone-numbers {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .phone {
+            font-size: 20px;
+            color: #FF6347;
+            font-weight: bold;
+        }
+        
+        .social-platforms {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        
+        .platform {
+            background: linear-gradient(135deg, #FFA500, #FF6347);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="left-section">
+            <img src="../public/assets/DareshwarKitchen_logo.png" alt="Dareshwar Kitchen Logo" class="logo">
+            <div class="business-name">Dareshwar Kitchen</div>
+            <div class="tagline">Homemade Goodness</div>
+        </div>
+        
+        <div class="right-section">
+            <div class="info-block">
+                <div class="info-item">
+                    <div class="icon">📍</div>
+                    <div class="info-content">
+                        <h3>Address</h3>
+                        <p>Plot no 99, Rajendra Nagar 2nd Cross<br>
+                        Behind Adarsh Nagar Police Station<br>
+                        Solapur Road, Vijayapur - 586103</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">📞</div>
+                    <div class="info-content">
+                        <h3>Contact</h3>
+                        <div class="phone-numbers">
+                            <span class="phone">7021373684</span>
+                            <span class="phone">9975857988</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">🛵</div>
+                    <div class="info-content">
+                        <h3>Order Online</h3>
+                        <div class="social-platforms">
+                            <div class="platform">🍔 Zomato</div>
+                            <div class="platform">🛵 Swiggy</div>
+                            <div class="platform">📘 Facebook</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
