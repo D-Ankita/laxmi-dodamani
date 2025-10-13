@@ -4,8 +4,8 @@
       "id": "besan-ladoo",
       "name": "Besan Ladoo",
       "price": {
-        "250g": 130,
-        "1kg": 500
+        "250g": 140,
+        "1kg": 520
       },
       "image": "/assets/products/besan_ladoo_1.png",
       "description": "Traditional sweet made with roasted gram flour and pure ghee",
@@ -50,8 +50,8 @@
       "id": "green-moong-ladoo",
       "name": "Green Moong Ladoo",
       "price": {
-        "250g": 130,
-        "1kg": 500
+        "250g": 140,
+        "1kg": 520
       },
       "image": "/assets/products/moong_ladoo_1.png",
       "description": "Healthy and nutritious ladoo made with green moong dal",
@@ -96,8 +96,8 @@
       "id": "dinka-ladoo",
       "name": "Dinka Ladoo",
       "price": {
-        "250g": 160,
-        "1kg": 600
+        "250g": 170,
+        "1kg": 630
       },
       "image": "/assets/products/dinka_ladoo_1.png",
       "description": "Special ladoo made with premium ingredients. No wheat flour, no sugar.",
@@ -146,8 +146,8 @@
       "id": "groundnut-ladoo",
       "name": "Groundnut Ladoo",
       "price": {
-        "250g": 75,
-        "1kg": 280
+        "250g": 80,
+        "1kg": 300
       },
       "image": "/assets/products/groundnut_ladoo_1.png",
       "description": "Nutritious ladoo made with roasted groundnuts",
@@ -192,8 +192,8 @@
       "id": "rawa-ladoo",
       "name": "Rawa Ladoo",
       "price": {
-        "250g": 80,
-        "1kg": 300
+        "250g": 90,
+        "1kg": 320
       },
       "image": "/assets/products/rawa_ladoo_1.png",
       "description": "Delicate ladoo made with roasted semolina. No coconut.",
@@ -239,8 +239,8 @@
       "id": "til-sesame-ladoo",
       "name": "Til (Sesame) Ladoo",
       "price": {
-        "250g": 90,
-        "1kg": 350
+        "250g": 100,
+        "1kg": 380
       },
       "image": "/assets/products/til_ladoo_1.png",
       "description": "Healthy ladoo made with roasted sesame seeds",
@@ -285,8 +285,8 @@
       "id": "ragi-ladoo",
       "name": "Ragi Ladoo",
       "price": {
-        "250g": 120,
-        "1kg": 440
+        "250g": 130,
+        "1kg": 500
       },
       "image": "/assets/products/ragi_ladoo_1.png",
       "description": "Nutritious ladoo made with finger millet flour",
@@ -331,8 +331,8 @@
       "id": "methi-ladoo",
       "name": "Methi Ladoo",
       "price": {
-        "250g": 140,
-        "1kg": 600
+        "250g": 150,
+        "1kg": 620
       },
       "image": "/assets/products/methi_ladoo_1.png",
       "description": "Healthy ladoo with fenugreek seeds and nutritious ingredients",
@@ -380,8 +380,8 @@
       "id": "murmura-chivda",
       "name": "Murmura Chivda",
       "price": {
-        "250g": 70,
-        "1kg": 280
+        "250g": 80,
+        "1kg": 300
       },
       "image": "/assets/products/murmura_chivda_1.png",
       "description": "Crispy snack made with puffed rice",
@@ -427,8 +427,8 @@
       "id": "avalakki-chivda",
       "name": "Avalakki Chivda",
       "price": {
-        "250g": 80,
-        "1kg": 300
+        "250g": 90,
+        "1kg": 320
       },
       "image": "/assets/products/avalakki_chivda_1.jpg",
       "description": "Flattened rice snack with nuts and spices",
@@ -474,8 +474,8 @@
       "id": "chakli",
       "name": "Chakli",
       "price": {
-        "250g": 100,
-        "1kg": 400
+        "250g": 110,
+        "1kg": 420
       },
       "image": "/assets/products/chakli_1.png",
       "description": "Spiral-shaped crispy snack. No ghee, fried in cold pressed oil.",
