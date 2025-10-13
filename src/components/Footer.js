@@ -6,18 +6,15 @@ import {
   LocationOn, 
   WhatsApp,
   Facebook,
-  Instagram,
-  LinkedIn,
-  Twitter
+  Instagram
 } from '@mui/icons-material';
 
 const Footer = () => {
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: LinkedIn, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: WhatsApp, href: 'https://wa.me/917021373684', label: 'WhatsApp' },
+    { icon: Instagram, href: 'https://instagram.com/laxmi_dodamani_1978', label: 'Instagram' },
+    { icon: Facebook, href: 'https://facebook.com/financial.advisor.laxmi.m.dodamani', label: 'Facebook' },
   ];
 
   const containerVariants = {

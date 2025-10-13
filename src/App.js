@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
@@ -158,6 +158,7 @@ function App() {
             <main className="main-content">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/me" element={<Navigate to="/" replace />} />
                 <Route path="/dareshwar-kitchen" element={<DareshwarKitchen />} />
                 <Route path="/lic-services" element={<LICServices />} />
                 <Route path="/star-health" element={<StarHealth />} />
