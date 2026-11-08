@@ -49,13 +49,13 @@ const ProductCard = ({ item, index }) => {
               label="Premium"
               size="small"
               sx={{
-                background: 'linear-gradient(135deg, #FFD700, #FFA500)',
-                color: '#8B4513',
+                background: 'var(--gold-fill)',
+                color: 'var(--ink-100)',
                 fontWeight: 600,
                 fontSize: '0.7rem',
                 height: '24px',
                 '& .MuiChip-icon': {
-                  color: '#8B4513'
+                  color: 'var(--ink-100)'
                 }
               }}
             />
@@ -135,7 +135,7 @@ const ProductCard = ({ item, index }) => {
                 label="Pure Ghee"
                 size="small"
                 sx={{
-                  background: 'linear-gradient(135deg, #FF6B35, #F7931E)',
+                  background: 'var(--kitchen-500)',
                   color: 'white',
                   fontWeight: 600,
                   fontSize: '0.65rem',
@@ -182,7 +182,7 @@ const ProductCard = ({ item, index }) => {
                 WebkitBoxOrient: 'vertical',
                 fontSize: '0.8rem',
                 lineHeight: 1.4,
-                color: '#666'
+                color: 'var(--ink-300)'
               }}
             >
               {item.description}
@@ -219,7 +219,7 @@ const ProductCard = ({ item, index }) => {
                     sx={{ 
                       fontWeight: 700,
                       fontSize: '0.95rem',
-                      color: '#9D2235'
+                      color: 'var(--crimson-500)'
                     }}
                   >
                     ₹{item.price[weight]}
@@ -257,11 +257,11 @@ const ProductMarquee = ({ items }) => {
       },
       '&::before': {
         left: 0,
-        background: 'linear-gradient(90deg, #fff 0%, transparent 100%)',
+        background: 'linear-gradient(90deg, var(--surface-100) 0%, transparent 100%)',
       },
       '&::after': {
         right: 0,
-        background: 'linear-gradient(-90deg, #fff 0%, transparent 100%)',
+        background: 'linear-gradient(-90deg, var(--surface-100) 0%, transparent 100%)',
       }
     }}>
       <Box

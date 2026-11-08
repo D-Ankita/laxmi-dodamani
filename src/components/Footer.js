@@ -49,8 +49,8 @@ const Footer = () => {
       whileInView="visible"
       viewport={{ once: true }}
       style={{
-        background: 'linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%)',
-        borderTop: '1px solid #E2E8F0',
+        background: 'var(--surface-100)',
+        borderTop: '1px solid var(--line-100)',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -63,8 +63,8 @@ const Footer = () => {
         width: '100%',
         height: '100%',
         background: `
-          radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%)
+          none,
+          none
         `,
         animation: 'float 15s ease-in-out infinite',
       }} />
@@ -196,7 +196,7 @@ const Footer = () => {
                           top: '50%',
                           width: '0%',
                           height: '2px',
-                          background: 'linear-gradient(90deg, #3B82F6, #8B5CF6)',
+                          background: 'var(--trust-500)',
                           transition: 'width 0.3s ease',
                           transform: 'translateY(-50%)',
                         },

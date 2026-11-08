@@ -141,14 +141,14 @@ const ProductDetails = ({ open, onClose, product }) => {
             width: '6px'
           },
           '&::-webkit-scrollbar-track': {
-            background: '#f1f1f1'
+            background: 'var(--surface-300)'
           },
           '&::-webkit-scrollbar-thumb': {
-            background: '#c1c1c1',
+            background: 'var(--line-200)',
             borderRadius: '3px'
           },
           '&::-webkit-scrollbar-thumb:hover': {
-            background: '#a8a8a8'
+            background: 'var(--line-200)'
           }
         }}>
           <TabPanel value={tabValue} index={0}>

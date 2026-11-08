@@ -28,11 +28,11 @@ const ProductCard = ({ item, onClick }) => {
             : '0 1px 2px rgba(0,0,0,0.04)',
           transition: 'all 0.2s ease',
           cursor: 'pointer',
-          border: '1px solid #e8e8e8',
+          border: '1px solid var(--line-100)',
           '&:hover': {
             transform: 'translateY(-1px)',
             boxShadow: '0 6px 20px rgba(0,0,0,0.1)',
-            borderColor: '#d0d0d0'
+            borderColor: 'var(--line-200)'
           }
         }}
       >
@@ -50,13 +50,13 @@ const ProductCard = ({ item, onClick }) => {
             label="Premium"
             size="small"
             sx={{
-              background: 'linear-gradient(135deg, #FFD700, #FFA500)',
-              color: '#8B4513',
+              background: 'var(--gold-fill)',
+              color: 'var(--ink-100)',
               fontWeight: 600,
               fontSize: '0.55rem',
               height: '16px',
               '& .MuiChip-icon': {
-                color: '#8B4513'
+                color: 'var(--ink-100)'
               }
             }}
           />
@@ -68,7 +68,7 @@ const ProductCard = ({ item, onClick }) => {
             height: 140,
             overflow: 'hidden',
             position: 'relative',
-            bgcolor: '#f8f8f8'
+            bgcolor: 'var(--surface-300)'
           }}
         >
           <Box
@@ -134,7 +134,7 @@ const ProductCard = ({ item, onClick }) => {
               label="Pure Ghee"
               size="small"
               sx={{
-                background: 'linear-gradient(135deg, #FF6B35, #F7931E)',
+                background: 'var(--kitchen-500)',
                 color: 'white',
                 fontWeight: 600,
                 fontSize: '0.5rem',
@@ -153,7 +153,7 @@ const ProductCard = ({ item, onClick }) => {
           <Typography
             variant="h6"
             sx={{
-              color: '#2c2c2c',
+              color: 'var(--ink-100)',
               fontWeight: 600,
               mb: 0.5,
               fontSize: '0.8rem',
@@ -181,7 +181,7 @@ const ProductCard = ({ item, onClick }) => {
               WebkitBoxOrient: 'vertical',
               fontSize: '0.65rem',
               lineHeight: 1.3,
-              color: '#666'
+              color: 'var(--ink-300)'
             }}
           >
             {item.description}
@@ -218,7 +218,7 @@ const ProductCard = ({ item, onClick }) => {
                   sx={{ 
                     fontWeight: 700,
                     fontSize: '0.8rem',
-                    color: '#9D2235'
+                    color: 'var(--crimson-500)'
                   }}
                 >
                   ₹{item.price[weight]}

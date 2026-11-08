@@ -13,26 +13,29 @@ import TermsOfService from './pages/TermsOfService';
 import Footer from './components/Footer';
 import './App.css';
 
+// MUI parses these values to compute contrast text, so they must be literal
+// colours rather than var() references. Keep them in step with the light theme
+// in src/styles/tokens.css, which stays the source of truth.
 const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#3B82F6',
-      light: '#60A5FA',
-      dark: '#1D4ED8',
+      main: '#1B3C6B', // --trust-500
+      light: '#2E5A94',
+      dark: '#15304F', // --trust-600
     },
     secondary: {
-      main: '#8B5CF6',
-      light: '#A855F7',
-      dark: '#7C3AED',
+      main: '#C2451A', // --kitchen-500
+      light: '#D9622F',
+      dark: '#A33C12', // --kitchen-600
     },
     background: {
-      default: '#F0F4F8',
-      paper: '#F8FAFC',
+      default: '#FAF6F0', // --surface-100
+      paper: '#FFFFFF', // --surface-200
     },
     text: {
-      primary: '#1E293B',
-      secondary: '#475569',
+      primary: '#1B2432', // --ink-100
+      secondary: '#4A5565', // --ink-200
     },
   },
   typography: {
@@ -93,7 +96,7 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: '#F0F4F8',
+          backgroundColor: 'var(--surface-100)',
         },
       },
     },
