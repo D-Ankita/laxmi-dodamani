@@ -1,65 +1,79 @@
 /* Sleek Light Theme Inspired by Tailwind Keynote */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
+/* DEPRECATED ALIAS LAYER.
+ *
+ * These are the variable names the site was built on. They name colours by
+ * appearance rather than by role, which is why nothing stopped a fortieth hex
+ * value being invented. They now point at the real tokens in
+ * src/styles/tokens.css so existing rules keep working unchanged.
+ *
+ * Do not add to this list, and do not use these names in new code. Use the
+ * tokens directly. When the last reference to a name here is gone, delete the
+ * line. The eight --gradient-* names resolve to flat colours on purpose: the
+ * site's gradients were decoration in colours the brand does not own.
+ */
 :root {
-  /* Light Theme Color Palette */
-  --primary-color: #3B82F6;
-  --secondary-color: #8B5CF6;
-  --accent-color: #F59E0B;
-  --success-color: #10B981;
-  --warning-color: #F59E0B;
-  --error-color: #EF4444;
-  
-  /* Sleek Gradients */
-  --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
-  --gradient-secondary: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
-  --gradient-accent: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-  --gradient-success: linear-gradient(135deg, #10B981 0%, #059669 100%);
-  --gradient-light: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
-  --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 100%);
-  --gradient-hero: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
-  
-  /* Modern Soft Shadows - More Professional */
-  --shadow-sm: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.08), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
-  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.1), 0 6px 12px -4px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 24px 48px -8px rgba(0, 0, 0, 0.12), 0 12px 24px -8px rgba(0, 0, 0, 0.06);
-  --shadow-2xl: 0 32px 64px -16px rgba(0, 0, 0, 0.16);
-  
-  /* Modern Border Radius - Softer & Professional */
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-xl: 32px;
-  --radius-2xl: 48px;
+  --primary-color: var(--trust-500);
+  --secondary-color: var(--trust-500);
+  --accent-color: var(--gold-500);
+  --primary-gold: var(--gold-500);
+  --success-color: var(--success-500);
+  --warning-color: var(--warning-500);
+  --error-color: var(--danger-500);
+
+  --gradient-primary: var(--trust-500);
+  --gradient-secondary: var(--trust-500);
+  --gradient-accent: var(--gold-500);
+  --gradient-success: var(--success-500);
+  --gradient-light: var(--surface-200);
+  --gradient-card: var(--surface-200);
+  --gradient-hero: var(--surface-100);
+
+  --shadow-2xl: var(--shadow-xl);
+
+  /* --radius-full stays 50% here: the old rules use it on square boxes to make
+     circles, where the token's 999px would behave differently. */
   --radius-full: 50%;
-  
-  /* Smooth Transitions */
+
   --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  /* Light Theme Colors */
-  --bg-primary: #F0F4F8;
-  --bg-secondary: #F8FAFC;
-  --bg-tertiary: #F1F5F9;
-  --bg-card: #FFFFFF;
-  --bg-hero: #F8FAFC;
+
+  --bg-primary: var(--surface-100);
+  --bg-secondary: var(--surface-100);
+  --bg-tertiary: var(--surface-300);
+  --bg-card: var(--surface-200);
+  --bg-hero: var(--surface-100);
   --bg-overlay: rgba(255, 255, 255, 0.95);
-  
-  /* Text Colors */
-  --text-primary: #1E293B;
-  --text-secondary: #475569;
-  --text-tertiary: #64748B;
-  --text-muted: #94A3B8;
-  --text-white: #FFFFFF;
-  --text-dark: #0F172A;
-  
-  /* Border Colors */
-  --border-light: #E2E8F0;
-  --border-medium: #CBD5E1;
-  --border-dark: #94A3B8;
-  --border-accent: rgba(59, 130, 246, 0.2);
+
+  --text-primary: var(--ink-100);
+  --text-secondary: var(--ink-200);
+  --text-tertiary: var(--ink-300);
+  --text-muted: var(--ink-300);
+  --text-white: var(--ink-inverse);
+  --text-dark: var(--ink-100);
+
+  --border-light: var(--line-100);
+  --border-medium: var(--line-200);
+  --border-dark: var(--line-200);
+  --border-accent: var(--trust-100);
+}
+
+/* The signal colour is the one thing that changes between the two arms of the
+ * business. Ground and ink stay identical everywhere, so the site still reads
+ * as one person. Wrap a page in .arm-kitchen and every primary action, active
+ * state and eyebrow on it turns terracotta instead of navy; the insurance
+ * pages need no class, because navy is the default. */
+.arm-kitchen {
+  --trust-500: var(--kitchen-500);
+  --trust-600: var(--kitchen-600);
+  --trust-100: var(--kitchen-100);
+  --primary-color: var(--kitchen-500);
+  --secondary-color: var(--kitchen-500);
+  --gradient-primary: var(--kitchen-500);
+  --gradient-secondary: var(--kitchen-500);
+  --focus: var(--kitchen-500);
 }
 
 * {
@@ -110,26 +124,11 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: 
-    /* Main light blue background */
-    linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 100%),
-    /* Left side purple-to-blue gradient */
-    linear-gradient(90deg, 
-      rgba(139, 92, 246, 0.08) 0%, 
-      rgba(99, 102, 241, 0.06) 20%, 
-      rgba(59, 130, 246, 0.04) 40%, 
-      transparent 60%
-    ),
-    /* Subtle radial gradients for depth */
-    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.02) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.02) 0%, transparent 50%);
-  animation: float 60s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(0.5deg); }
+  /* The ground is flat. The old purple-to-blue wash and its three radial
+     tints were decoration in colours the brand does not own. A signal colour
+     may appear behind a hero as a light source (--glow-trust, --glow-kitchen),
+     never as a wash across the whole page. */
+  background: var(--surface-100);
 }
 
 /* Elegant Glow Effects */
@@ -259,7 +258,7 @@ body {
   right: 16px;
   width: 40px;
   height: 40px;
-  background: #ff6b35;
+  background: var(--kitchen-500);
   border: none;
   border-radius: var(--radius-full);
   color: white;
@@ -275,7 +274,7 @@ body {
 .flip-trigger:hover {
   transform: scale(1.05);
   box-shadow: var(--shadow-lg);
-  background: #e55a2b;
+  background: var(--kitchen-600);
 }
 
 .flip-trigger svg {
@@ -305,7 +304,7 @@ body {
 .product-card-title {
   font-size: 20px !important;
   font-weight: 700 !important;
-  color: #8223dd;
+  color: var(--trust-500);
   margin-bottom: 12px;
   text-align: center;
   text-transform: uppercase;
@@ -322,7 +321,7 @@ body {
 .product-card-price {
   font-size: 18px;
   font-weight: 600;
-  color: #ff6b35;
+  color: var(--kitchen-500);
   margin-bottom: 16px;
   text-align: center;
 }
@@ -478,7 +477,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
   transition: var(--transition-normal);
 }
 
@@ -588,7 +587,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
   animation: shimmer 2s infinite;
 }
 
@@ -599,7 +598,7 @@ body {
 
 /* Sleek Page Styles - More Professional */
 .page-hero {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+  background: var(--surface-200);
   backdrop-filter: blur(20px);
   border-radius: var(--radius-2xl);
   padding: 64px 48px;
@@ -618,7 +617,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.02) 50%, transparent 70%);
+  background: none;
   animation: shimmer 8s infinite;
 }
 
@@ -650,7 +649,7 @@ body {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.03), transparent);
+  background: none;
   transition: var(--transition-normal);
 }
 

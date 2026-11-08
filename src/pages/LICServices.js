@@ -254,7 +254,7 @@ const LICServices = () => {
                   fontSize: { xs: '2.5rem', md: '4rem', lg: '5rem' },
                   fontWeight: 900,
                   marginBottom: '16px',
-                  background: 'linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #A855F7 100%)',
+                  background: 'var(--trust-500)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -286,7 +286,7 @@ const LICServices = () => {
                 <motion.span
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ duration: 0.8, repeat: Infinity }}
-                  style={{ color: '#3B82F6' }}
+                  style={{ color: 'var(--trust-500)' }}
                 >
                   |
                 </motion.span>
@@ -325,7 +325,7 @@ const LICServices = () => {
                   display: 'inline-block',
                   padding: '12px 24px',
                   borderRadius: '50px',
-                  background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                  background: 'var(--trust-100)',
                   border: '1px solid rgba(59, 130, 246, 0.2)',
                   backdropFilter: 'blur(10px)'
                 }}
@@ -334,7 +334,7 @@ const LICServices = () => {
                   variant="h5" 
                   sx={{ 
                     fontWeight: 600,
-                    background: 'linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%)',
+                    background: 'var(--trust-500)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
@@ -458,7 +458,7 @@ const LICServices = () => {
         >
           <motion.div variants={itemVariants}>
             <Card className="animated-card" sx={{ 
-              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+              background: 'var(--trust-100)',
               backdropFilter: 'blur(20px)',
               border: '1px solid rgba(255, 255, 255, 0.2)',
               borderRadius: '24px',

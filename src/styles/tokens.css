@@ -1,0 +1,130 @@
+/* Laxmi Dodamani design tokens
+ * Generated from the design system. This file is the single source of truth
+ * for colour, spacing, radius and shadow. Do not write a hex value anywhere
+ * else in src/.
+ *
+ * The colour model is ground / ink / signal:
+ *   ground  - surface-*, identical on every page of the site
+ *   ink     - ink-*, identical on every page of the site
+ *   signal  - trust-* on the insurance pages, kitchen-* on the kitchen pages.
+ *             One primary action per viewport, nothing else.
+ * Semantic colours (success, warning, danger, info) sit outside that model.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Ground */
+  --surface-100: #faf6f0;
+  --surface-200: #ffffff;
+  --surface-300: #f1e9dd;
+
+  /* Ink */
+  --ink-100: #1b2432;
+  --ink-200: #4a5565;
+  --ink-300: #5f6a7a;
+  --ink-inverse: #ffffff;
+
+  /* Lines */
+  --line-100: #e8dfd2;
+  --line-200: #8e8474;
+
+  /* Signal: insurance */
+  --trust-500: #1b3c6b;
+  --trust-600: #15304f;
+  --trust-100: #e7edf6;
+  --crimson-500: #9d2235;
+
+  /* Signal: kitchen */
+  --kitchen-500: #c2451a;
+  --kitchen-600: #a33c12;
+  --kitchen-100: #fbebe2;
+  --gold-500: #8a5a05;
+  --gold-fill: #ffc940;
+
+  /* State */
+  --success-500: #1c7a4d;
+  --warning-500: #8a5a05;
+  --danger-500: #b3261e;
+  --info-500: #1a5fb4;
+  --focus: #1b3c6b;
+
+  /* Type */
+  --font-display: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --font-sans: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Spacing, 4px base */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 999px;
+
+  /* Shadow, warm rather than grey so cards sit on cream */
+  --shadow-sm: 0 2px 8px 0 rgba(43, 32, 20, 0.05);
+  --shadow-md: 0 4px 16px -2px rgba(43, 32, 20, 0.09), 0 2px 8px -2px rgba(43, 32, 20, 0.05);
+  --shadow-lg: 0 12px 24px -4px rgba(43, 32, 20, 0.12), 0 6px 12px -4px rgba(43, 32, 20, 0.06);
+  --shadow-xl: 0 24px 48px -8px rgba(43, 32, 20, 0.14);
+
+  /* The one permitted gradient: the signal colour as a light source behind a
+   * hero, never as a fill on an element. */
+  --glow-trust: radial-gradient(ellipse 65% 115% at 50% 115%, rgba(27, 60, 107, 0.18) 0%, rgba(27, 60, 107, 0.06) 42%, rgba(27, 60, 107, 0) 70%);
+  --glow-kitchen: radial-gradient(ellipse 70% 120% at 50% 118%, rgba(194, 69, 26, 0.22) 0%, rgba(194, 69, 26, 0.07) 42%, rgba(194, 69, 26, 0) 70%);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --surface-100: #141a24;
+  --surface-200: #1d2533;
+  --surface-300: #28313f;
+
+  --ink-100: #f4efe7;
+  --ink-200: #c5bfb4;
+  --ink-300: #9aa3b0;
+  --ink-inverse: #141a24;
+
+  --line-100: #2c3645;
+  --line-200: #6b7890;
+
+  --trust-500: #8fb6e8;
+  --trust-600: #afccf2;
+  --trust-100: #22304a;
+  --crimson-500: #f0919b;
+
+  --kitchen-500: #ff8a4c;
+  --kitchen-600: #ffa876;
+  --kitchen-100: #37231a;
+  --gold-500: #f0b429;
+  --gold-fill: #ffc940;
+
+  --success-500: #4ecb8e;
+  --warning-500: #f2b544;
+  --danger-500: #ff8a80;
+  --info-500: #7fb2f0;
+  --focus: #8fb6e8;
+
+  --shadow-sm: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 24px 48px -8px rgba(0, 0, 0, 0.6);
+
+  --glow-trust: radial-gradient(ellipse 65% 115% at 50% 115%, rgba(143, 182, 232, 0.16) 0%, rgba(143, 182, 232, 0.05) 42%, rgba(143, 182, 232, 0) 70%);
+  --glow-kitchen: radial-gradient(ellipse 70% 120% at 50% 118%, rgba(255, 138, 76, 0.18) 0%, rgba(255, 138, 76, 0.06) 42%, rgba(255, 138, 76, 0) 70%);
+}
+
+/* Focus is never removed. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}

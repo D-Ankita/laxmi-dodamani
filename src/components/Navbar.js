@@ -67,10 +67,10 @@ const Navbar = () => {
             mx: 1,
             transition: 'all 0.3s ease',
             '&.Mui-selected': {
-              background: 'linear-gradient(135deg, rgba(27, 60, 107, 0.1) 0%, rgba(157, 34, 53, 0.1) 100%)',
+              background: 'var(--trust-100)',
               color: 'primary.main',
               '&:hover': {
-                background: 'linear-gradient(135deg, rgba(27, 60, 107, 0.2) 0%, rgba(157, 34, 53, 0.2) 100%)',
+                background: 'var(--trust-100)',
               },
             },
           }}
@@ -182,14 +182,14 @@ const Navbar = () => {
                         borderRadius: '12px',
                         transition: 'all 0.3s ease',
                         background: location.pathname === route.path 
-                          ? 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)'
+                          ? 'var(--trust-100)'
                           : 'transparent',
                         backdropFilter: 'blur(10px)',
                         border: location.pathname === route.path 
                           ? '1px solid rgba(59, 130, 246, 0.2)'
                           : '1px solid transparent',
                         '&:hover': {
-                          background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                          background: 'var(--trust-100)',
                           color: 'primary.main',
                           transform: 'translateY(-2px)',
                           boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
@@ -201,7 +201,7 @@ const Navbar = () => {
                           height: '2px',
                           bottom: 0,
                           left: 0,
-                          background: 'linear-gradient(90deg, #3B82F6, #8B5CF6)',
+                          background: 'var(--trust-500)',
                           transition: 'width 0.3s ease-in-out',
                           borderRadius: '1px',
                         },

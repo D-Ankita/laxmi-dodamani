@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Container, Typography, Grid, Card, Dialog, DialogContent, IconButton, Box, Button, Tabs, Tab, Chip, Rating } from '@mui/material';
+import { ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Restaurant, 
@@ -30,6 +31,19 @@ const TabPanel = ({ children, value, index }) => (
 );
 
 const DareshwarKitchen = () => {
+  // This page belongs to the kitchen arm, so its signal colour is terracotta
+  // rather than the site's default navy. The .arm-kitchen class below does
+  // that for everything styled in CSS; MUI reads its palette from JS, so it
+  // needs the same switch here. Values mirror --kitchen-* in
+  // src/styles/tokens.css.
+  const outerTheme = useTheme();
+  const kitchenTheme = useMemo(
+    () => createTheme(outerTheme, {
+      palette: { primary: { main: '#C2451A', light: '#D9622F', dark: '#A33C12' } },
+    }),
+    [outerTheme]
+  );
+
   const [activeTab, setActiveTab] = useState('all');
   const [activeCardTab, setActiveCardTab] = useState({});
   const [flippedCards, setFlippedCards] = useState({});
@@ -289,7 +303,8 @@ const DareshwarKitchen = () => {
   };
 
   return (
-    <>
+    <ThemeProvider theme={kitchenTheme}>
+    <div className="arm-kitchen">
       <SEO 
         title="Dareshwar Kitchen - Traditional Homemade Delicacies"
         description="Discover authentic traditional homemade delicacies from Dareshwar Kitchen. Specializing in healthy ladoos, chakli, and festive treats made with pure ghee and premium ingredients."
@@ -357,7 +372,7 @@ const DareshwarKitchen = () => {
                   color="primary"
                   sx={{ 
                     fontWeight: 600,
-                    background: 'linear-gradient(135deg, #1B3C6B, #9D2235)',
+                    background: 'var(--trust-500)',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text'
@@ -604,7 +619,7 @@ const DareshwarKitchen = () => {
         >
           <motion.div variants={itemVariants}>
             <Card className="service-card" sx={{ 
-              background: 'linear-gradient(135deg, rgba(255, 107, 53, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%)',
+              background: 'var(--kitchen-100)',
               border: '1px solid rgba(255, 255, 255, 0.2)',
               borderRadius: '24px',
               padding: '48px',
@@ -689,9 +704,9 @@ const DareshwarKitchen = () => {
                     onClick={handleModalClose}
                     size="small"
                     sx={{
-                      bgcolor: '#ff6b35',
+                      bgcolor: 'var(--kitchen-500)',
                       color: 'white',
-                      '&:hover': { bgcolor: '#e55a2b' }
+                      '&:hover': { bgcolor: 'var(--kitchen-600)' }
                     }}
                   >
                     <Close />
@@ -753,14 +768,14 @@ const DareshwarKitchen = () => {
                     width: '6px'
                   },
                   '&::-webkit-scrollbar-track': {
-                    background: '#f1f1f1'
+                    background: 'var(--surface-300)'
                   },
                   '&::-webkit-scrollbar-thumb': {
-                    background: '#c1c1c1',
+                    background: 'var(--line-200)',
                     borderRadius: '3px'
                   },
                   '&::-webkit-scrollbar-thumb:hover': {
-                    background: '#a8a8a8'
+                    background: 'var(--line-200)'
                   }
                 }}>
                   <TabPanel value={modalTabValue} index={0}>
@@ -878,7 +893,8 @@ const DareshwarKitchen = () => {
           )}
         </DialogContent>
       </Dialog>
-    </>
+    </div>
+    </ThemeProvider>
   );
 };
 
